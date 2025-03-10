@@ -4,12 +4,12 @@ export const socialNetworks = [
     {
         id: 1,
         logo: <Linkedin size={30} strokeWidth={1} />,
-        src: "#",
+        src: "https://www.linkedin.com/in/jsantanatoglia/"
     },
     {
         id: 2,
         logo: <Instagram size={30} strokeWidth={1} />,
-        src: "#!",
+        src: "https://www.instagram.com/jsglia/"
     },
 ];
 

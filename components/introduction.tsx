@@ -28,7 +28,7 @@ const Introduction = () => {
             </h1>
             
             <p className='mx-auto mb-2 text-xl md:mx-0 md:mb-8'>
-            +2 years of experience Software Development, specializing in Frontend with React. I've worked on several projects using HTML5, CSS3, SASS, Bootstrap, Tailwind, JavaScript, TypeScript, Next.js, Git, GitHub, and React, fully leveraging Hooks, Components, Props, and Routes. Additionally, I have experience with databases using MySQL, Firebase, and Microsoft Excel.
+            I am a passionate frontend developer with experience building modern and functional user interfaces using React. My primary focus is combining my development knowledge with a solid understanding of design to create exceptional web experiences
             </p>
             <div className='flex item-center justify-center gap-3 md:justify-start md:gap-10'>
                     <Link href="/proyects" 
@@ -44,7 +44,7 @@ const Introduction = () => {
                     CV
                     </Link>
             </div>
-
+{/* 1.02.57 MIN */}
             </div>
         </div> 
     </div>
