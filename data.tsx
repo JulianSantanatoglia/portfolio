@@ -1,4 +1,4 @@
-import { GalleryVerticalEnd, CodeSquare, HomeIcon, UserRound, Linkedin, Instagram, Crop, Pencil, Computer, Book, Rocket, Speech } from "lucide-react";
+import { GalleryVerticalEnd, CodeSquare, HomeIcon, UserRound, Linkedin, Mail, Github, Crop, Pencil, Computer, Book, Rocket, Speech } from "lucide-react";
 
 export const socialNetworks = [
     {
@@ -8,8 +8,13 @@ export const socialNetworks = [
     },
     {
         id: 2,
-        logo: <Instagram size={30} strokeWidth={1} />,
-        src: "https://www.instagram.com/jsglia/"
+        logo: <Github size={30} strokeWidth={1} />,
+        src: "https://github.com/JulianSantanatoglia"
+    },
+    {
+        id: 3,
+        logo: <Mail size={30} strokeWidth={1} />,
+        src: "mailto:juliansantanatoglia@gmail.com"
     },
 ];
 
@@ -31,7 +36,7 @@ export const itemsNavbar = [
         id: 3,
         title: "Target",
         icon: <CodeSquare  size={25} color="#fff" strokeWidth={1} />,
-        link: "/services",
+        link: "/skills",
     },
     {
         id: 4,
