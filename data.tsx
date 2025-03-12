@@ -18,16 +18,58 @@ export const socialNetworks = [
     },
 ];
 // ########################################################
-export const Proyects = [
+export interface Project {
+    imageUrl: string;
+    title: string;
+    githubUrl: string;
+    websiteUrl: string;
+    technologies: string[];
+}
+
+export const projects: Project[] = [
     {
-        id: 1,
-        title: "JSfutbol",
-        websiteUrl: "https://jstore-three.vercel.app/",
-        githubUrl: "https://github.com/JulianSantanatoglia/jsport",
-        imageUrl: "/images/proyects/proyecto1.jpg",
-        skills: ["React", "JavaScript", "TypeScript", "CSS", "SASS"],
-    }
-]
+    imageUrl: "jsport.png",
+    title: "Jsport",
+    githubUrl: "https://github.com/JulianSantanatoglia/jsport",
+    websiteUrl: "https://jstore-three.vercel.app/",
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    },
+    {
+    imageUrl: "jsport.png",
+    title: "Cafeteria Almeria",
+    githubUrl: "https://github.com/JulianSantanatoglia/jsport",
+    websiteUrl: "https://jstore-three.vercel.app/",
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    },
+    {
+    imageUrl: "jsport.png",
+    title: "Jsport",
+    githubUrl: "https://github.com/JulianSantanatoglia/jsport",
+    websiteUrl: "https://jstore-three.vercel.app/",
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    },
+    {
+    imageUrl: "jsport.png",
+    title: "Jsport",
+    githubUrl: "https://github.com/JulianSantanatoglia/jsport",
+    websiteUrl: "https://jstore-three.vercel.app/",
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    },
+    {
+    imageUrl: "jsport.png",
+    title: "Jsport",
+    githubUrl: "https://github.com/JulianSantanatoglia/jsport",
+    websiteUrl: "https://jstore-three.vercel.app/",
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    },
+    {
+    imageUrl: "jsport.png",
+    title: "Jsport",
+    githubUrl: "https://github.com/JulianSantanatoglia/jsport",
+    websiteUrl: "https://jstore-three.vercel.app/",
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    },
+];
 // ##########################################################
 export const itemsNavbar = [
     {
@@ -39,17 +81,11 @@ export const itemsNavbar = [
     {
         id: 2,
         title: "User",
-        icon: <UserRound size={25} color="#fff" strokeWidth={1} />,
+        icon: <CodeSquare size={25} color="#fff" strokeWidth={1} />,
         link: "/about-me",
     },
     {
         id: 3,
-        title: "Target",
-        icon: <CodeSquare  size={25} color="#fff" strokeWidth={1} />,
-        link: "/skills",
-    },
-    {
-        id: 4,
         title: "GalleryVerticalEnd",
         icon: <GalleryVerticalEnd size={25} color="#fff" strokeWidth={1} />,
         link: "/portfolio",

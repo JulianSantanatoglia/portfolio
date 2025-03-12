@@ -30,7 +30,7 @@ const Introduction = () => {
             ¡Hola! Soy Desarrollador Frontend con amplia experiencia dedicado a la creación de interfaces de usuario innovadoras y funcionales. Poseo un profundo conocimiento de las mejores prácticas de desarrollo y una sólida comprensión de los principios de diseño, lo que me permite crear experiencias web de usuario excepcionales.
             </p>
             <div className='flex item-center justify-center gap-3 md:justify-start md:gap-10'>
-                    <Link href="/proyects" 
+                    <Link href="/portfolio" 
                     className='px-3 py-2 transition-all border-2 cursor-pointer text-md w-fit rounded-xl hover:shadow-xl hover:shadow-white/50'>
                         Proyectos
                     </Link>

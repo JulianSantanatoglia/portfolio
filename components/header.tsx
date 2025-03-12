@@ -7,7 +7,7 @@ const Header = () => {
         <MotionTransition position="bottom" className="absolute <-40 inline-block w-full top-5  md:top-10">
             <header>
                 <div className="container justify-between max-w-6xl mx-auto md:flex">
-                    <Link href="/">
+                    <Link href="/home">
                     <h1 className="my-3 text-2xl font-bold text-center md:text-left md:text-4xl">
                         Julián
                         <span className="text-sky-600 ">Santanatoglia</span>
@@ -22,11 +22,9 @@ const Header = () => {
                                 {logo}
                             </Link>
                         ))}
-{/* MIN 47:02 */}
                     </div>
                 </div>
             </header>
-
         </MotionTransition>
     );
 }

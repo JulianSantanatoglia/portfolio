@@ -1,38 +1,15 @@
-import ContainerPage from "../../../../components/container";
-import ProjectCard from "../../../../components/ProjectCard";
+import CoverParticles from "../../../../components/cover-particles";
 import TransitionPage from "../../../../components/transition-page";
 
-const PageAboutMe = () => {
+export default function PageAboutMe() {
   return (
     <>
-    <TransitionPage />
-      <ContainerPage>
-        <ProjectCard
-          imageUrl="jsport.png"
-          title="Jsport"
-          githubUrl="https://github.com/JulianSantanatoglia/jsport"
-          websiteUrl="https://jstore-three.vercel.app/"
-          technologies={["React", "TypeScript", "Tailwind CSS"]}
-        />
-
-        <ProjectCard
-          imageUrl="jsport.png"
-          title="Jsport"
-          githubUrl="https://github.com/JulianSantanatoglia/jsport"
-          websiteUrl="https://jstore-three.vercel.app/"
-          technologies={["React", "TypeScript", "Tailwind CSS"]}
-        />
-
-        <ProjectCard
-          imageUrl="jsport.png"
-          title="Jsport"
-          githubUrl="https://github.com/JulianSantanatoglia/jsport"
-          websiteUrl="https://jstore-three.vercel.app/"
-          technologies={["React", "TypeScript", "Tailwind CSS"]}
-        />
-      </ContainerPage>
-     </>
+    <main>
+      <TransitionPage />
+      <div className="flex min-h-[100vh] h-full bg-no-repeat bg-gradient-cover">
+        <CoverParticles />
+      </div>
+    </main>
+    </>
   );
-};
-
-export default PageAboutMe;
+}
