@@ -17,8 +17,18 @@ export const socialNetworks = [
         src: "mailto:juliansantanatoglia@gmail.com"
     },
 ];
-
-
+// ########################################################
+export const Proyects = [
+    {
+        id: 1,
+        title: "JSfutbol",
+        websiteUrl: "https://jstore-three.vercel.app/",
+        githubUrl: "https://github.com/JulianSantanatoglia/jsport",
+        imageUrl: "/images/proyects/proyecto1.jpg",
+        skills: ["React", "JavaScript", "TypeScript", "CSS", "SASS"],
+    }
+]
+// ##########################################################
 export const itemsNavbar = [
     {
         id: 1,
