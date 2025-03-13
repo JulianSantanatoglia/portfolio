@@ -36,6 +36,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             className={`w-full rounded-xl transition-filter duration-300 ${isHovered ? 'blur-sm' : ''}`}
             src={imageUrl}
             alt={title}
+            style={{ height: '200px', objectFit: 'cover' }} // Altura fija y object-fit
           />
         </div>
         {isHovered && (
@@ -44,7 +45,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-300 flex items-center border border-blue-400 rounded-md px-4 py-2 text-lg transition-colors duration-300 hover:border-blue-300"
+              className="bg-black hover:bg-gray-800 text-white flex items-center border border-black rounded-md px-4 py-2 text-lg transition-colors duration-300 hover:border-gray-800"
             >
               <Github className="mr-1 h-6 w-6" />
               <span>GitHub</span>
@@ -53,14 +54,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               href={websiteUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-400 hover:text-green-300 border border-green-400 rounded-md px-4 py-2 text-lg transition-colors duration-300 hover:border-green-300"
+              className="bg-blue-400 hover:bg-blue-300 text-white border border-blue-400 rounded-md px-4 py-2 text-lg transition-colors duration-300 hover:border-blue-300"
             >
               Website
             </a>
           </div>
         )}
       </div>
-      <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-wrap"> {/* Skills fuera de la imagen */}
+      <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-wrap">
         {technologies.map((tech) => (
           <span
             key={tech}
