@@ -26,8 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${robotoMono.variable}`}>
-        <Navbar />
+      <body className={"bg-gray-900 `${inter.variable} ${robotoMono.variable}`"}>
         <Header />
         {children}
       </body>

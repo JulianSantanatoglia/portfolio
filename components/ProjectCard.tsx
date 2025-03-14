@@ -61,7 +61,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         )}
       </div>
-      <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-wrap">
+      <div className=" bottom-0 left-0 right-0 p-6 flex flex-wrap">
         {technologies.map((tech) => (
           <span
             key={tech}
