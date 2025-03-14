@@ -10,6 +10,7 @@ const Skills = () => {
         { name: 'GitHub', icon: <Github className="h-6 w-6 text-gray-600" /> },
         { name: 'Figma', icon: <Figma className="h-6 w-6 text-pink-500" /> },
     ];
+    // 
 
     return (
         <div className="bg-gray-900 text-gray-300"> {/* Dark background for futuristic feel */}
