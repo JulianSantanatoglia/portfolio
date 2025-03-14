@@ -10,13 +10,13 @@ const Introduction = () => {
             <Image className='pl-0 lg:pl-[150px]' src="/home-4.png" priority width="600" height="600" alt="Profile pic"/>
             <div className='flex flex-col justify-center max-w-md'>
             <h1 className='mb-5 text-2xl leading-tight text-center md:text-left md:text-4xl md:mb-19'>
-                Si podes pensarlo, podes
+                Si tienes una idea, podemos
                 <TypeAnimation
-                sequence={[" desarrolarlo",
+                sequence={[" implementarla",
                     1000,
-                    " optimizarlo",
+                    " desarrollarla",
                     1000,
-                    " implementarlo",
+                    " programarla",
                     1000,
                 ]}
                 wrapper='span'

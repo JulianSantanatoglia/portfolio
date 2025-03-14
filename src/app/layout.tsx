@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "../../components/navbar";
 import Header from "../../components/header";
 
 const inter = Inter({
@@ -26,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={"bg-gray-900 `${inter.variable} ${robotoMono.variable}`"}>
+<body className={`${inter.variable} ${robotoMono.variable} bg-gray-900`}>
         <Header />
         {children}
       </body>

@@ -9,6 +9,14 @@ const Skills = () => {
         { name: 'Git', icon: <GitBranch className="h-6 w-6 text-gray-400" /> },
         { name: 'GitHub', icon: <Github className="h-6 w-6 text-gray-600" /> },
         { name: 'Figma', icon: <Figma className="h-6 w-6 text-pink-500" /> },
+        { name: 'Tailwind CSS', icon: <Wind className="h-6 w-6 text-cyan-400" /> },
+        { name: 'Git', icon: <GitBranch className="h-6 w-6 text-gray-400" /> },
+        { name: 'GitHub', icon: <Github className="h-6 w-6 text-gray-600" /> },
+        { name: 'Figma', icon: <Figma className="h-6 w-6 text-pink-500" /> },
+        { name: 'Tailwind CSS', icon: <Wind className="h-6 w-6 text-cyan-400" /> },
+        { name: 'Git', icon: <GitBranch className="h-6 w-6 text-gray-400" /> },
+        { name: 'GitHub', icon: <Github className="h-6 w-6 text-gray-600" /> },
+        { name: 'Figma', icon: <Figma className="h-6 w-6 text-pink-500" /> },
     ];
     // 
 

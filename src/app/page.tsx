@@ -1,4 +1,5 @@
 import CoverParticles from "../../components/cover-particles";
+import Footer from "../../components/footer";
 import Introduction from "../../components/introduction";
 import Navbar from "../../components/navbar";
 import ProjectCard from "../../components/ProjectCard";
@@ -20,7 +21,7 @@ export default function Home() {
           <Skills />
           <CoverParticles />
           {/* PORTFOLIO */}
-          <div className="bg-gray-900flex gap-25 w-full max-w-6xl px-4 pb-40 mx-auto mt-40 md:pb-0 md:px-6">
+          <div className="bg-gray-900flex gap-25 w-full max-w-6xl px-4 pb-40 mx-auto mt-40 md:pb-0 md:px-6 ">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map((project, index) => (
                 <ProjectCard
@@ -33,6 +34,7 @@ export default function Home() {
                 />
               ))}
           </div>
+          <Footer />
           </div>
       </main>
     </>
