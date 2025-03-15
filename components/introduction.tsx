@@ -2,14 +2,15 @@
 import Image from 'next/image'
 import Link from 'next/link';
 import { TypeAnimation } from 'react-type-animation';
+import Experience from './experience';
 
 const Introduction = () => {
     return (
-        <div className='z-20 w-full bg-darkBg/60 '>
-            <div className='gap-3.5 z-20 grid items-center h-full md:p-120 p-6 py-20 md:grid-cols-2'>
+        <div id="introduction" className='z-20 w-full bg-darkBg/60 '>
+<div className='gap-3.5 z-20 grid items-center h-full md:pl-70 p-6 py-20 md:py-6 md:grid-cols-2'>
             <Image className='pl-0 lg:pl-[150px]' src="/home-4.png" priority width="600" height="600" alt="Profile pic"/>
             <div className='flex flex-col justify-center max-w-md'>
-            <h1 className='mb-5 text-2xl leading-tight text-center md:text-left md:text-4xl md:mb-19'>
+            <h1 className='mb-5 text-2xl leading-tight text-center md:text-left md:text-4xl'>
                 Si tienes una idea, podemos
                 <TypeAnimation
                 sequence={[" implementarla",
@@ -25,9 +26,9 @@ const Introduction = () => {
                 className='font-bold text-blue-600'
                 />
             </h1>
-            
+            <Experience />
             <p className='mx-auto mb-2 text-xl md:mx-0 md:mb-8'>
-            ¡Hola! Soy Desarrollador Frontend con amplia experiencia dedicado a la creación de interfaces de usuario innovadoras y funcionales. Poseo un profundo conocimiento de las mejores prácticas de desarrollo y una sólida comprensión de los principios de diseño, lo que me permite crear experiencias web de usuario excepcionales.
+            ¡Hola! Soy Desarrollador Frontend con amplia experiencia dedicado a la creación de interfaces de usuario innovadoras y funcionales. 
             </p>
             <div className='flex item-center justify-center gap-3 md:justify-start md:gap-10'>
                     <Link href="#portfolio" 

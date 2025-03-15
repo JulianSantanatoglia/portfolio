@@ -13,7 +13,7 @@ const Navbar = () => {
       className="fixed z-40 flex flex-col items-center justify-center w-full mt-auto h-max bottom-10"
     >
       <nav>
-        <div className="flex items-center justify-center gap-4 px-6 py-2 rounded-full bg-blue-950/80 backdrop-blur-md"> {/* Aumento de tamaño y oscuridad */}
+        <div className="flex items-center justify-center gap-4 px-6 py-2 rounded-full bg-blue-950/80 backdrop-blur-md">
           {itemsNavbar.map((item) => (
             <div
               key={item.id}

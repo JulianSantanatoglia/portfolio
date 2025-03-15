@@ -27,7 +27,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-    >
+    > 
       <div className="absolute inset-0 z-0"></div>
       <div className="relative p-6 z-10">
         <div className="relative">
@@ -56,7 +56,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               rel="noopener noreferrer"
               className="bg-blue-400 hover:bg-blue-300 text-white border border-blue-400 rounded-md px-4 py-2 text-lg transition-colors duration-300 hover:border-blue-300"
             >
-              Website
+              Demo
             </a>
           </div>
         )}

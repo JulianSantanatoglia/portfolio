@@ -1,13 +1,13 @@
-interface ContainerProps {
-  children: React.ReactNode;
-}
-const ContainerPage = (props: ContainerProps) => {
-  const { children } = props;
-  return (
-    <div className="flex gap-15 w-full max-w-6xl px-4 pb-40 mx-auto mt-40 md:pb-0 md:px-6">
-      {children}
-    </div>
-  );
-};
+// interface ContainerProps {
+//   children: React.ReactNode;
+// }
+// const ContainerPage = (props: ContainerProps) => {
+//   const { children } = props;
+//   return (
+//     <div className="flex gap-15 w-full max-w-6xl px-4 pb-40 mx-auto mt-40 md:pb-0 md:px-6">
+//       {children}
+//     </div>
+//   );
+// };
 
-export default ContainerPage;
+// export default ContainerPage;
