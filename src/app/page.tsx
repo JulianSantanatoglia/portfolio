@@ -1,5 +1,4 @@
 import CoverParticles from "../../components/cover-particles";
-import Experience from "../../components/experience";
 import Footer from "../../components/footer";
 import Introduction from "../../components/introduction";
 import Navbar from "../../components/navbar";
@@ -42,7 +41,6 @@ export default function Home() {
                 />
               ))}
           </div>
-
           </div>
           <Footer />
       </main>
