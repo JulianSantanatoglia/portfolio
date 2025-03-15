@@ -123,15 +123,15 @@ export const itemsNavbar = [
     },
     {
         id: 2,
-        title: "User",
+        title: "Skills",
         icon: <CodeSquare size={25} color="#fff" strokeWidth={1} />,
-        link: "/about-me",
+        link: "#skills-section",
     },
     {
         id: 3,
         title: "GalleryVerticalEnd",
         icon: <GalleryVerticalEnd size={25} color="#fff" strokeWidth={1} />,
-        link: "/portfolio",
+        link: "#portfolio",
     },
 ];
 

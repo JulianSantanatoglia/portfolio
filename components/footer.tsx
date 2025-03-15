@@ -1,29 +1,36 @@
 const Footer = () => {
   return (
-    <footer style={{ 
-      backgroundColor: '#1a1a1a', 
-      color: '#e0e0e0', 
-      padding: '2rem 0', 
-      textAlign: 'center',
-      fontFamily: 'sans-serif',
-      fontSize: '0.9rem',
-      borderTop: '1px solid #333' 
-    }}>
-      <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-        <p>&copy; {new Date().getFullYear()} Tu Nombre. Todos los derechos reservados.</p>
-        <nav style={{ marginTop: '1rem' }}>
-          <a href="/politica-privacidad" style={{ color: '#e0e0e0', textDecoration: 'none', margin: '0 1rem' }}>Política de Privacidad</a>
-          <a href="/terminos-uso" style={{ color: '#e0e0e0', textDecoration: 'none', margin: '0 1rem' }}>Términos de Uso</a>
-          <a href="/contacto" style={{ color: '#e0e0e0', textDecoration: 'none', margin: '0 1rem' }}>Contacto</a>
+    <footer className="bg-gray-900 text-gray-200 py-8 text-center border-t border-gray-800 font-sans text-sm">
+      <div className="max-w-4xl mx-auto px-4">
+        <p>&copy; {new Date().getFullYear()} Julian Santanatoglia. Todos los derechos reservados.</p>
+        <nav className="mt-4">
+          <a href="/politica-privacidad" className="text-gray-200 no-underline mx-4">Política de Privacidad</a>
+          <a href="/terminos-uso" className="text-gray-200 no-underline mx-4">Términos de Uso</a>
+          <a href="/contacto" className="text-gray-200 no-underline mx-4">Contacto</a>
         </nav>
-        <div style={{ marginTop: '1.5rem' }}>
-          <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer" style={{ color: '#e0e0e0', margin: '0 0.5rem' }}>
+        <div className="mt-6">
+          <a
+            href="https://github.com/tuusuario"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-200 mx-2"
+          >
             <i className="fab fa-github"></i>
           </a>
-          <a href="https://linkedin.com/in/tuperfil" target="_blank" rel="noopener noreferrer" style={{ color: '#e0e0e0', margin: '0 0.5rem' }}>
+          <a
+            href="https://linkedin.com/in/tuperfil"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-200 mx-2"
+          >
             <i className="fab fa-linkedin"></i>
           </a>
-          <a href="https://twitter.com/tuusuario" target="_blank" rel="noopener noreferrer" style={{ color: '#e0e0e0', margin: '0 0.5rem' }}>
+          <a
+            href="https://twitter.com/tuusuario"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-200 mx-2"
+          >
             <i className="fab fa-twitter"></i>
           </a>
         </div>
