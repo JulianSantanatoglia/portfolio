@@ -7,14 +7,12 @@ import {
   FaReact,
   FaAngular,
   FaBootstrap,
-  FaNodeJs,
   FaJsSquare,
   FaGitAlt,
   FaGithub,
   FaDatabase,
   FaWordpress,
   FaFigma,
-  FaMicrosoft,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
