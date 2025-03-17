@@ -1,5 +1,6 @@
 "use client";
 
+import Contact from "../../components/contact";
 import CoverParticles from "../../components/cover-particles";
 import Footer from "../../components/footer";
 import Introduction from "../../components/introduction";
@@ -12,26 +13,23 @@ import { projects } from "../../data";
 export default function Home() {
   return (
     <>
+          <CoverParticles />
       <main>
-        <CoverParticles />
         <TransitionPage />
         <Navbar />
         {/* INTRODUCTION */}
-        <div className="flex min-h-[100vh] h-full bg-no-repeat bg-gradient-cover bg-gray-900">
-          <Introduction />
-        </div>
+        <div className="flex min-h-screen h-full bg-no-repeat bg-gradient-cover bg-gray-900 overflow-x-hidden">
+  <Introduction />
+</div>
         {/* SKILLS */}
         <Skills />
         {/* PORTFOLIO */}
-        <h2
-          id="portfolio"
-          className="text-2xl pt-20 font-semibold tracking-tight uppercase text-gray-100 text-center"
-        >
-          Portfolio
-        </h2>
-        <p className="text-lg text-gray-400 text-center">
-          Algunos de mis proyectos
-        </p>
+        <div id="portfolio" className="text-center mb-10 pt-10">
+          <h2 className="text-3xl font-semibold tracking-tight uppercase text-gray-100 mb-2">
+            Trabajos
+          </h2>
+          <p className="text-lg text-gray-400">Proyectos y colaboraciones</p>
+        </div>
         <div className="bg-gray-900 w-full max-w-6xl px-4 pb-20 md:pb-40 mx-auto mt-10 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
@@ -46,8 +44,10 @@ export default function Home() {
             ))}
           </div>
         </div>
+        <Contact />
         <Footer />
       </main>
+
     </>
   );
 }

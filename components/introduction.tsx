@@ -7,21 +7,24 @@ import Experience from "./experience";
 const Introduction = () => {
   return (
     <div id="introduction" className="z-20 w-full bg-darkBg/60">
-      <div className="gap-8 z-20 grid items-center h-full p-6 py-16 md:py-10 lg:grid-cols-2">
+      <div className="gap-8 z-20 grid items-center h-full p-4 py-10 md:py-10 lg:grid-cols-2"> {/* Reducido p-6 a p-4 y py-16 a py-10*/}
         <div className="flex justify-center lg:justify-start lg:pl-20 xl:pl-40">
-          <Image
-            src="/home-4.png"
-            priority
-            width={400}
-            height={400}
-            alt="Profile pic"
-            className="max-w-full h-auto"
-          />
+          <div className="w-full max-w-[300px]"> {/* Definir un ancho máximo para la imagen */}
+            <Image
+              src="/home-4.png"
+              priority
+              width={400}
+              height={400}
+              alt="Profile pic"
+              className="w-full h-auto"
+              layout="responsive" // Usar layout responsive
+            />
+          </div>
         </div>
         <div className="flex flex-col justify-center max-w-2xl">
-          <h1 className="mb-6 text-3xl leading-tight text-center md:text-left md:text-4xl lg:text-5xl">
+          <h1 className="mb-4 text-2xl leading-tight text-center md:text-left md:text-4xl lg:text-5xl"> {/* Reducido text-3xl a text-2xl y mb-6 a mb-4 */}
             Si tienes una idea,
-            <br className="md:hidden" /> {/* Salto de línea solo en mobile */}
+            <br className="md:hidden" />
             podemos
             <TypeAnimation
               sequence={[
@@ -39,16 +42,15 @@ const Introduction = () => {
             />
           </h1>
           <Experience />
-          <p className="mx-auto mb-4 text-lg md:mx-0 md:mb-10 lg:text-xl">
-            ¡Hola! Soy Desarrollador Frontend con amplia experiencia dedicado a
-            la creación de interfaces de usuario innovadoras y funcionales.
+          <p className="mx-auto mb-4 text-base md:mx-0 md:mb-10 lg:text-xl"> {/* Reducido text-lg a text-base */}
+            ¡Hola! Soy Julián, Desarrollador web Frontend con experiencia en diseño. Construyo sitios web modernos y funcionales, enfocados en la mejor experiencia de usuario.
           </p>
           <div className="flex items-center justify-center gap-4 md:justify-start md:gap-8 lg:gap-10">
             <Link
               href="#portfolio"
               className="px-4 py-2 transition-all border-2 cursor-pointer text-md w-fit rounded-xl hover:shadow-xl hover:shadow-white/50"
             >
-              Proyectos
+              Ver trabajos
             </Link>
             <Link
               href="../cv.pdf"

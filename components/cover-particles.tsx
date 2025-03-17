@@ -16,7 +16,7 @@ const CoverParticles = () => {
 
     return (
         init &&
-        <div className="w-full h-full absolute top-0 left-0">
+        <div className="w-full h-full absolute top-0 left-0 pointer-events-none">
             <Particles
                 id="tsparticles"
                 options={{
