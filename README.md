@@ -1,6 +1,6 @@
 # 🌟 Mi Portfolio
 
-¡Bienvenido a mi perfil de GitHub! Aquí encontrarás mi portfolio personal, donde muestro los proyectos más destacados en los que he trabajado. Soy un desarrollador apasionado por crear interfaces modernas y dinámicas. Mi portfolio está construido utilizando una combinación de tecnologías modernas, como **React**, **Next.js**, **Tailwind CSS** y diversas bibliotecas para mejorar la experiencia del usuario.
+¡Bienvenido a mi portfolio! Aquí es donde muestro los proyectos más destacados en los que he trabajado. Soy un desarrollador apasionado por crear interfaces modernas y dinámicas. Mi portfolio está construido utilizando una combinación de tecnologías modernas, como **React**, **Next.js**, **Tailwind CSS** y diversas bibliotecas para mejorar la experiencia del usuario.
 
 ## 🚀 Tecnologías y Herramientas Utilizadas
 
