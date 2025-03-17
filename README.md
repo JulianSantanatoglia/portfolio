@@ -1,37 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌟 Mi Portfolio
 
-## Getting Started
+¡Bienvenido a mi perfil de GitHub! Aquí encontrarás mi portfolio personal, donde muestro los proyectos más destacados en los que he trabajado. Soy un desarrollador apasionado por crear interfaces modernas y dinámicas. Mi portfolio está construido utilizando una combinación de tecnologías modernas, como **React**, **Next.js**, **Tailwind CSS** y diversas bibliotecas para mejorar la experiencia del usuario.
 
-First, run the development server:
+## 🚀 Tecnologías y Herramientas Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **React**: Framework de JavaScript para construir interfaces de usuario interactivas.
+- **Next.js**: Framework de React para la construcción de aplicaciones web optimizadas y de alto rendimiento.
+- **Tailwind CSS**: Utilizo este framework de CSS para crear diseños responsivos y estilizados de manera eficiente.
+- **Lucide**: Biblioteca de iconos que me permite utilizar una gran variedad de íconos personalizados.
+- **React Icons**: Conjunto de iconos que integran perfectamente con React para mejorar la experiencia de usuario.
+- **Particles.js**: Biblioteca para crear efectos de partículas interactivos que agregan un toque dinámico y atractivo a las interfaces.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Visita mi Portfolio
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Puedes ver mi portfolio en vivo haciendo clic en el siguiente enlace:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+[Mi Portfolio en línea](https:/juliansantanatoglia.netlify.app)
 
-## Learn More
+## 📫 Conecta conmigo
 
-To learn more about Next.js, take a look at the following resources:
+Si deseas saber más sobre mí, colaborar en algún proyecto o simplemente charlar sobre desarrollo web, no dudes en contactarme:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 📧 Correo: [juliansantanatoglia@gmail.com](mailto:juliansantanatoglia@gmail.com)
+- 🌐 LinkedIn: [linkedin.com/in/jsantanatoglia](https://www.linkedin.com/in/jsantanatoglia)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📝 Licencia
 
-## Deploy on Vercel
+Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# portfolio
+¡Gracias por visitar mi perfil! Si tienes alguna sugerencia o feedback, siempre estoy abierto a mejorar. 😊
