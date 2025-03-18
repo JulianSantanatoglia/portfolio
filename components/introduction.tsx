@@ -59,7 +59,7 @@ const Introduction = () => {
             <Link
               href="../cv.pdf"
               className="px-4 py-2 transition-all border-2 cursor-pointer text-white bg-blue-950/80  border-white-500 text-md w-fit rounded-xl hover:shadow-xl hover:shadow-blue-500"
-              download="../cv.pdf"
+              download="../public/cv.pdf"
             >
               CV
             </Link>
