@@ -13,17 +13,14 @@ import { projects } from "../../data";
 export default function Home() {
   return (
     <>
-          <CoverParticles />
+      <CoverParticles />
       <main>
         <TransitionPage />
         <Navbar />
-        {/* INTRODUCTION */}
-        <div className="flex min-h-screen h-full bg-no-repeat bg-gradient-cover bg-gray-900 overflow-x-hidden">
-  <Introduction />
-</div>
-        {/* SKILLS */}
+        <div className="flex min-h-screen bg-no-repeat bg-gradient-cover bg-gray-900 overflow-x-hidden">
+          <Introduction />
+        </div>
         <Skills />
-        {/* PORTFOLIO */}
         <div id="portfolio" className="text-center mb-10 pt-10">
           <h2 className="text-3xl font-semibold tracking-tight uppercase text-gray-100 mb-2">
             Trabajos
@@ -47,7 +44,6 @@ export default function Home() {
         <Contact />
         <Footer />
       </main>
-
     </>
   );
 }

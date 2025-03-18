@@ -25,11 +25,11 @@ const CoverParticles = () => {
                         events: {
                             onHover: {
                                 enable: true,
-                                mode: "grab", // Changed to "grab" for line interaction
+                                mode: "grab",
                             },
                         },
                         modes: {
-                            grab: { // Configuration for the "grab" effect
+                            grab: {
                                 distance: 140,
                                 links: {
                                     opacity: 1,
@@ -39,10 +39,10 @@ const CoverParticles = () => {
                     },
                     particles: {
                         color: {
-                            value: "#3399ff", // A bright blue color
+                            value: "#3399ff", 
                         },
                         links: {
-                            enable: true, // Enable links between particles
+                            enable: true,
                             distance: 150,
                             color: "#3399ff",
                             opacity: 0.4,
