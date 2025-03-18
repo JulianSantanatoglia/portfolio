@@ -54,7 +54,7 @@ const Contact = () => {
             </div>
             <div className="flex items-center justify-center">
               <button
-                className="bg-blue-400 hover:bg-blue-300 text-white border border-blue-400 rounded-md px-4 py-2 text-sm transition-colors duration-300 hover:border-blue-300"
+                className="bg-blue-950/80 hover:bg-blue-300 text-white border border-white-400 rounded-md px-4 py-2 text-sm transition-colors duration-300 hover:border-blue-300"
                 type="submit"
               >
                 Enviar

@@ -27,7 +27,7 @@ export default function Home() {
           </h2>
           <p className="text-lg text-gray-400">Proyectos y colaboraciones</p>
         </div>
-        <div className="bg-gray-900 w-full max-w-6xl px-4 pb-20 md:pb-40 mx-auto mt-10 md:px-6">
+        <div className="bg-gray-900 w-full max-w-6xl px-4 pb-20 md:pb-20 mx-auto mt-10 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
               <ProjectCard
