@@ -10,15 +10,19 @@ const Introduction = () => {
       <div className="gap-8 z-20 grid items-center h-full p-4 py-10 md:py-10 lg:grid-cols-2">
         <div className="flex justify-center lg:justify-end lg:pr-20 xl:pr-40 pt-16 md:pt-0">
           <div className="w-full max-w-[300px]">
-            <Image
-              src="/home-4.png"
-              priority
-              width={400}
-              height={400}
-              alt="Profile pic"
-              className="w-full h-auto"
-              layout="responsive"
-            />
+            <div className="p-2 bg-gradient-to-r from-blue-500 to-blue-950 rounded-full inline-block">
+              <div className="p-1 bg-white rounded-full transition-transform duration-300 hover:scale-105">
+                <Image
+                  src="/foto.jpg"
+                  priority
+                  width={400}
+                  height={400}
+                  alt="Profile pic"
+                  className="rounded-full"
+                  layout="responsive"
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div className="flex flex-col justify-center max-w-2xl">
