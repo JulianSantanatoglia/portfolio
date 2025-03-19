@@ -118,3 +118,27 @@ export const itemsNavbar = [
       link: "#contact",
     },
   ];
+
+
+  export const itemsTimeline = [
+    {
+      title: 'EventLoop',
+      date: 'Octubre 2024 - Actualidad',
+      description: 'Desarrollo frontend en plataforma de venta de entradas para eventos musicales, implementación y optimización de estilos con CSS, Sass y Tailwind, desarrollo de funcionalidades interactivas con JavaScript y Angular, y gestión de versiones con Git.',
+    },
+    {
+      title: 'Joyería Diaz',
+      date: 'Marzo 2024 - Actualidad',
+      description: 'Diseño y desarrollo de páginas web funcionales, accesibles y modernas utilizando HTML, CSS, Bootstrap, JavaScript, React, Github, SASS, Hosting y dominio, certificado SSL, Bases de datos, WordPress, Elementor, plataformas de pago y autenticación.',
+    },
+    {
+      title: 'Carrera de Desarrollo Web Frontend',
+      date: 'Marzo 2023',
+      description: 'Desarrollo web frontend con JavaScript y React: Creación de aplicaciones web interactivas y eficientes.',
+    },
+    {
+      title: 'RT & Embajador de Google',
+      date: 'Agosto 2021 - Actualidad',
+      description: 'Asesor comercial, control de objetivos y KPIs de tienda, logística, formación al nuevo personal sobre distintos software de tramitación y gestión de la tienda. Informar a los clientes sobre las nuevas funciones de las aplicaciones de Google y las actualizaciones del sistema operativo Android',
+    },
+  ]

@@ -16,6 +16,9 @@ const robotoMono = Roboto_Mono({
 export const metadata: Metadata = {
   title: "Julian Santanatoglia - Frontend Web Developer",
   description: "Portfolio de Julian Santanatoglia, desarrollador web frontend",
+  // icons: {
+  //   icon: '/public/foto.jpg'
+  // },
 };
 
 export default function RootLayout({
@@ -24,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="es" className="scroll-smooth">
       <body className={`${inter.variable} ${robotoMono.variable} bg-gray-900`}>
         <Header />
         {children}

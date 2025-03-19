@@ -7,6 +7,7 @@ import Introduction from "../../components/introduction";
 import Navbar from "../../components/navbar";
 import ProjectCard from "../../components/ProjectCard";
 import Skills from "../../components/skills";
+import Timeline from "../../components/timeline";
 import TransitionPage from "../../components/transition-page";
 import { projects } from "../../data";
 
@@ -21,6 +22,7 @@ export default function Home() {
           <Introduction />
         </div>
         <Skills />
+        <Timeline />
         <div id="portfolio" className="text-center mb-10 pt-10">
           <h2 className="text-3xl font-semibold tracking-tight uppercase text-gray-100 mb-2">
             Trabajos
