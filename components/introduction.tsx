@@ -61,9 +61,9 @@ const Introduction = () => {
               Ver trabajos
             </Link>
             <Link
-              href="../cv.pdf"
+              href="../cv-jsantanatoglia-SPA.pdf"
               className="px-4 py-2 transition-all border-2 cursor-pointer text-white bg-blue-950/80  border-white-500 text-md w-fit rounded-xl hover:shadow-xl hover:shadow-blue-500"
-              download="../public/cv.pdf"
+              download="cv-jsantanatoglia-SPA.pdf"
               target="_blank"
             >
               CV

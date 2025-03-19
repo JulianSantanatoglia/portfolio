@@ -4,7 +4,7 @@ import { itemsTimeline } from '../data';
 
 const Timeline: React.FC = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen to-black">
+    <div id="experience" className="flex justify-center items-center min-h-screen to-black">
       <div className="w-full max-w-4xl px-4 py-12">
         <h2 className="text-3xl font-bold text-white text-center mb-8">
           Experiencia profesional
