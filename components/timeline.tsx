@@ -7,7 +7,7 @@ const Timeline: React.FC = () => {
     <div id="experience" className="flex justify-center items-center min-h-screen to-black">
       <div className="w-full max-w-4xl px-4 py-12">
         <h2 className="text-3xl font-bold text-white text-center mb-8">
-          Experiencia profesional
+          EVOLUCIÓN PROFESIONAL
         </h2>
         <div className="relative">
           {itemsTimeline.map((item, index) => (
