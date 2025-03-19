@@ -186,7 +186,7 @@ export const itemsTimeline = [
       " y por ultimo en React: JSX, transpiling y componentes, promises, asincronía y MAP, consumiendo APIs, Hooks, children y patrones, Routing, navegación y eventos, Context y técnicas de rendering y Firebase",
   },
   {
-    title: "RT & Embajador de Google",
+    title: "RT & Embajador de Google - Orange",
     date: "Agosto 2021 - Actualidad",
     description:
       "Asesor comercial, control de objetivos y KPIs de tienda, logística, formación al nuevo personal sobre distintos software de tramitación y gestión de la tienda. Informar a los clientes sobre las nuevas funciones de las aplicaciones de Google y las actualizaciones del sistema operativo Android",
