@@ -196,7 +196,7 @@ export const itemsTimeline = [
   },
   {
     title: "Carrera de Desarrollo Web Frontend",
-    company: "K&C",
+    company: "Coderhouse",
     date: "Marzo 2023",
     description:
       "Conceptos de Desarrollo Web como HTML, CSS Box Modeling y Flexbox, Grids, Pseudoclases, Bootstrap, Git y GitHub, SASS, Animaciones CSS, SEO y servidores, K&C." +

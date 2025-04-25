@@ -1,0 +1,162 @@
+"use client";
+
+import React, { useState, useRef, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import ProjectCard from './ProjectCard';
+import { Project } from '../data';
+
+interface ProjectCarouselProps {
+  projects: Project[];
+}
+
+const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [projectsPerPage, setProjectsPerPage] = useState(3);
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  // Update projects per page based on screen size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setProjectsPerPage(1);
+      } else {
+        setProjectsPerPage(3);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const totalPages = Math.ceil(projects.length / projectsPerPage);
+
+  const nextSlide = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalPages);
+    setTimeout(() => setIsAnimating(false), 500);
+  };
+
+  const prevSlide = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + totalPages) % totalPages);
+    setTimeout(() => setIsAnimating(false), 500);
+  };
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setStartX(e.clientX);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging) return;
+    const diff = startX - e.clientX;
+    if (Math.abs(diff) > 100) {
+      if (diff > 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+      setIsDragging(false);
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  // Auto-advance slides every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (!isDragging && !isAnimating) {
+        nextSlide();
+      }
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [isDragging, isAnimating]);
+
+  return (
+    <div className="relative w-full py-8">
+
+      <div className="flex items-center justify-center gap-2 md:gap-4">
+        <button
+          onClick={prevSlide}
+          className="absolute left-2 md:static p-1.5 md:p-3 rounded-full bg-gray-800/70 hover:bg-gray-700/70 transition-all duration-300 text-white disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl hover:scale-110 z-10"
+          disabled={isAnimating}
+        >
+          <ChevronLeft size={20} className="md:w-7 md:h-7" />
+        </button>
+
+        <div className="overflow-hidden w-full max-w-5xl px-8 md:px-0">
+
+          <div
+            ref={carouselRef}
+            className="flex transition-transform duration-700 ease-out"
+            style={{
+              transform: `translateX(-${currentIndex * (100 / projectsPerPage)}%)`,
+              cursor: isDragging ? 'grabbing' : 'grab'
+            }}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseUp}
+          >
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className={`${projectsPerPage === 1 ? 'w-full' : 'w-1/3'} flex-shrink-0 px-1 md:px-3`}
+              >
+                <div className="h-[450px]">
+                  <ProjectCard
+                    imageUrl={project.imageUrl}
+                    title={project.title}
+                    githubUrl={project.githubUrl}
+                    websiteUrl={project.websiteUrl}
+                    technologies={project.technologies}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <button
+          onClick={nextSlide}
+          className="absolute right-2 md:static p-1.5 md:p-3 rounded-full bg-gray-800/70 hover:bg-gray-700/70 transition-all duration-300 text-white disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl hover:scale-110 z-10"
+          disabled={isAnimating}
+        >
+          <ChevronRight size={20} className="md:w-7 md:h-7" />
+        </button>
+      </div>
+
+      {/* Pagination dots */}
+      <div className="flex justify-center gap-2 mt-8 mb-4">
+        {Array.from({ length: totalPages }).map((_, index) => (
+          <button
+            key={index}
+            onClick={() => {
+              if (!isAnimating) {
+                setIsAnimating(true);
+                setCurrentIndex(index);
+                setTimeout(() => setIsAnimating(false), 500);
+              }
+            }}
+            className={`h-2 rounded-full transition-all duration-300 ${
+              index === currentIndex
+                ? 'bg-blue-500 w-6'
+                : 'bg-gray-600 w-2 hover:bg-gray-500'
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default ProjectCarousel; 
