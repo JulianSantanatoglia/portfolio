@@ -49,9 +49,7 @@ const Introduction = () => {
           </h1>
           <Experience />
           <p className="mx-auto mb-4 text-base md:mx-0 md:mb-10 mb-13 mt-8 lg:text-xl px-4 sm:px-0 text-center sm:text-left">
-            ¡Hola!👋 Soy Julián, Desarrollador web Frontend con experiencia en
-            la creacion de sitios web modernos y funcionales, enfocados en la
-            mejor experiencia de usuario con diseños atractivos.
+            ¡Hola!👋 Soy Desarrollador Frontend apasionado por crear sitios web modernos y funcionales con la mejor experiencia de usuario y diseños atractivos. tengo conocimientos en backend y habilidades en diseño. ¡Mira mi trabajo!
           </p>
           <div className="flex items-center justify-center gap-4 md:justify-start md:gap-8 lg:gap-10">
             <Link

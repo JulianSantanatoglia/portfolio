@@ -1,0 +1,40 @@
+{
+  "header": {
+    "title": "Julian",
+    "subtitle": "Santanatoglia"
+  },
+  "introduction": {
+    "title": "If you have an idea,",
+    "design": "design it",
+    "develop": "develop it",
+    "deploy": "deploy it",
+    "greeting": "Hello!👋 I'm Julian, a Frontend Web Developer with experience in creating modern and functional websites, focused on the best user experience with attractive designs.",
+    "view_works": "View works",
+    "cv": "CV"
+  },
+  "skills": {
+    "title": "Technologies",
+    "subtitle": "Tools I work with"
+  },
+  "timeline": {
+    "title": "PROFESSIONAL EVOLUTION"
+  },
+  "portfolio": {
+    "title": "Works",
+    "subtitle": "Projects and collaborations"
+  },
+  "contact": {
+    "title": "Let's talk!",
+    "subtitle": "Write to me and let's start working together",
+    "email": "Email",
+    "send_message": "Send message",
+    "whatsapp": "WhatsApp",
+    "send_direct": "Send me a direct message"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "contact": "Contact"
+  }
+} 

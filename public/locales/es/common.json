@@ -1,0 +1,40 @@
+{
+  "header": {
+    "title": "Julian",
+    "subtitle": "Santanatoglia"
+  },
+  "introduction": {
+    "title": "Si tienes una idea,",
+    "design": "diseñarla",
+    "develop": "desarrollarla",
+    "deploy": "desplegarla",
+    "greeting": "¡Hola!👋 Soy Julián, Desarrollador web Frontend con experiencia en la creacion de sitios web modernos y funcionales, enfocados en la mejor experiencia de usuario con diseños atractivos.",
+    "view_works": "Ver trabajos",
+    "cv": "CV"
+  },
+  "skills": {
+    "title": "Tecnologías",
+    "subtitle": "Herramientas con las que trabajo"
+  },
+  "timeline": {
+    "title": "EVOLUCIÓN PROFESIONAL"
+  },
+  "portfolio": {
+    "title": "Trabajos",
+    "subtitle": "Proyectos y colaboraciones"
+  },
+  "contact": {
+    "title": "¡Hablemos!",
+    "subtitle": "Escríbeme y comencemos a trabajar juntos",
+    "email": "Email",
+    "send_message": "Enviar mensaje",
+    "whatsapp": "WhatsApp",
+    "send_direct": "Envíame un mensaje directo"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Uso",
+    "contact": "Contacto"
+  }
+} 

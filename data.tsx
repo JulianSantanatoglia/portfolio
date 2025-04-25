@@ -59,6 +59,21 @@ export const projects: Project[] = [
     ],
   },
   {
+    imageUrl: "mushroom.png",
+    title: "Mushroom Mdp",
+    githubUrl: "https://github.com/JulianSantanatoglia/mushroommdp",
+    websiteUrl: "https://mushroom-mdp.netlify.app/",
+    technologies: [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "Javascript",
+      "React",
+      "TypeScript",
+      "Firebase",
+    ],
+  },
+  {
     imageUrl: "jsport.png",
     title: "JSPORT",
     githubUrl: "https://github.com/JulianSantanatoglia/jsport",
@@ -166,25 +181,22 @@ export const itemsNavbar = [
 
 export const itemsTimeline = [
   {
-    title: "Frontend Developer - EventLoop",
+    title: "Frontend Developer",
+    company: "EventLoop",
     date: "Abril 2024 - Actualidad",
     description:
       "Contribuyo en el Frontend de EventLoop, una plataforma de venta de entradas para eventos musicales, mis tareas son implementación y optimización de estilos con CSS, Sass y Tailwind, desarrollo de funcionalidades interactivas con JavaScript y Angular, y gestión de versiones con GitHub.",
   },
   {
-    title: "Desarrollador Wordpress - Joyería Diaz",
-    date: "Marzo 2023 - Abril 2024",
-    description:
-      "Diseñé y desarrolle un ecommerce para una joyeria utilizando WordPress, Astra, Blocksy y WooCommerce. Configuración completa de hosting, dominio y certificado SSL. Implementación de plataformas de pago, gestión de envíos y devoluciones. Redacción de textos persuasivos (copywriting) enfocados en la conversión. Integración de chat en vivo para soporte al cliente. Configuración de herramientas analíticas como Google Analytics y Google Maps para rastrear el tráfico web y la ubicación del negocio. Creación de logotipos, banners y edición de fotos de productos.",
-  },
-  {
     title: "Desarrollador / Diseñador Web",
-    date: "Marzo 2023 - Abril 2024",
+    company: "Freelance",
+    date: "Marzo 2023 - Actualidad",
     description:
       "Diseño y desarrollo de páginas web funcionales, accesibles y modernas utilizando HTML, CSS, Bootstrap, JavaScript, React, Github, SASS, Hosting y dominio, certificado SSL, Firebase, WordPress, Elementor, Blocksy, plataformas de pago y autenticación.",
   },
   {
     title: "Carrera de Desarrollo Web Frontend",
+    company: "K&C",
     date: "Marzo 2023",
     description:
       "Conceptos de Desarrollo Web como HTML, CSS Box Modeling y Flexbox, Grids, Pseudoclases, Bootstrap, Git y GitHub, SASS, Animaciones CSS, SEO y servidores, K&C." +
@@ -192,7 +204,8 @@ export const itemsTimeline = [
       " y por ultimo en React: JSX, transpiling y componentes, promises, asincronía y MAP, consumiendo APIs, Hooks, children y patrones, Routing, navegación y eventos, Context y técnicas de rendering y Firebase",
   },
   {
-    title: "RT & Embajador de Google - Orange",
+    title: "RT & Embajador de Android",
+    company: "Orange",  
     date: "Agosto 2021 - Actualidad",
     description:
       "Asesor comercial, control de objetivos y KPIs de tienda, logística, formación al nuevo personal sobre distintos software de tramitación y gestión de la tienda. Informar a los clientes sobre las nuevas funciones de las aplicaciones de Google y las actualizaciones del sistema operativo Android",
