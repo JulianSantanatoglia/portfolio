@@ -167,19 +167,19 @@ export const itemsNavbar = [
 export const itemsTimeline = [
   {
     title: "Frontend Developer - EventLoop",
-    date: "Octubre 2024 - Actualidad",
+    date: "Abril 2024 - Actualidad",
     description:
       "Contribuyo en el Frontend de EventLoop, una plataforma de venta de entradas para eventos musicales, mis tareas son implementación y optimización de estilos con CSS, Sass y Tailwind, desarrollo de funcionalidades interactivas con JavaScript y Angular, y gestión de versiones con GitHub.",
   },
   {
     title: "Desarrollador Wordpress - Joyería Diaz",
-    date: "Marzo 2024 - Actualidad",
+    date: "Marzo 2023 - Abril 2024",
     description:
       "Diseñé y desarrolle un ecommerce para una joyeria utilizando WordPress, Astra, Blocksy y WooCommerce. Configuración completa de hosting, dominio y certificado SSL. Implementación de plataformas de pago, gestión de envíos y devoluciones. Redacción de textos persuasivos (copywriting) enfocados en la conversión. Integración de chat en vivo para soporte al cliente. Configuración de herramientas analíticas como Google Analytics y Google Maps para rastrear el tráfico web y la ubicación del negocio. Creación de logotipos, banners y edición de fotos de productos.",
   },
   {
     title: "Desarrollador / Diseñador Web",
-    date: "Mayo 2023 - Actualidad",
+    date: "Marzo 2023 - Abril 2024",
     description:
       "Diseño y desarrollo de páginas web funcionales, accesibles y modernas utilizando HTML, CSS, Bootstrap, JavaScript, React, Github, SASS, Hosting y dominio, certificado SSL, Firebase, WordPress, Elementor, Blocksy, plataformas de pago y autenticación.",
   },
@@ -187,7 +187,7 @@ export const itemsTimeline = [
     title: "Carrera de Desarrollo Web Frontend",
     date: "Marzo 2023",
     description:
-      "En la parte de Desarrollo Web vi HTML, CSS Box Modeling y Flexbox, Grids, Pseudoclases, Bootstrap, Git y GitHub, SASS, Animaciones CSS, SEO y servidores, K&C." +
+      "Conceptos de Desarrollo Web como HTML, CSS Box Modeling y Flexbox, Grids, Pseudoclases, Bootstrap, Git y GitHub, SASS, Animaciones CSS, SEO y servidores, K&C." +
       " Luego en Javascript: Control de ciclos, funciones, arrays, objetos, funciones del orden superior, DOM y eventos, Asincronismo y peticiones, After DOM, promesas y librerías" +
       " y por ultimo en React: JSX, transpiling y componentes, promises, asincronía y MAP, consumiendo APIs, Hooks, children y patrones, Routing, navegación y eventos, Context y técnicas de rendering y Firebase",
   },

@@ -75,10 +75,10 @@ const Skills = () => {
   ];
 
   return (
-    <div id="skills-section" className="bg-gray-900 text-gray-300 py-5 my-8">
+    <div id="skills-section" className="bg-gray-900 text-gray-300 py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-semibold tracking-tight uppercase text-gray-100 mb-2">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold tracking-tight uppercase text-gray-100 mb-4">
             Tecnologías
           </h2>
           <p className="text-lg text-gray-400">
@@ -90,12 +90,12 @@ const Skills = () => {
             {skills.map((skill, index) => (
               <li
                 key={index}
-                className="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+                className="group relative flex flex-col items-center"
               >
-                <div className="p-4 rounded-xl bg-gray-800 hover:bg-gray-700 transition-colors duration-300">
-                  {React.cloneElement(skill.icon, { className: "h-10 w-10" })}
+                <div className="p-6 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 transition-all duration-300 group-hover:border-blue-500/50 group-hover:shadow-lg group-hover:shadow-blue-500/10">
+                  {React.cloneElement(skill.icon, { className: "h-8 w-8 transition-transform duration-300 group-hover:scale-110" })}
                 </div>
-                <span className="mt-3 text-sm text-center">{skill.name}</span>
+                <span className="mt-4 text-sm text-center font-medium text-gray-400 group-hover:text-blue-400 transition-colors duration-300">{skill.name}</span>
               </li>
             ))}
           </ul>
