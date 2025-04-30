@@ -22,6 +22,8 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setProjectsPerPage(1);
+      } else if (window.innerWidth < 1024) {
+        setProjectsPerPage(2);
       } else {
         setProjectsPerPage(3);
       }
@@ -70,20 +72,8 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
     setIsDragging(false);
   };
 
-  // Auto-advance slides every 5 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      if (!isDragging && !isAnimating) {
-        nextSlide();
-      }
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [isDragging, isAnimating]);
-
   return (
     <div className="relative w-full py-8">
-
       <div className="flex items-center justify-center gap-2 md:gap-4">
         <button
           onClick={prevSlide}
@@ -94,7 +84,6 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
         </button>
 
         <div className="overflow-hidden w-full max-w-5xl px-8 md:px-0">
-
           <div
             ref={carouselRef}
             className="flex transition-transform duration-700 ease-out"
@@ -110,7 +99,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className={`${projectsPerPage === 1 ? 'w-full' : 'w-1/3'} flex-shrink-0 px-1 md:px-3`}
+                className={`${projectsPerPage === 1 ? 'w-full' : projectsPerPage === 2 ? 'w-1/2' : 'w-1/3'} flex-shrink-0 px-1 md:px-3`}
               >
                 <div className="h-[450px]">
                   <ProjectCard
