@@ -9,6 +9,7 @@ interface ProjectCardProps {
   githubUrl: string;
   websiteUrl: string;
   technologies: string[];
+  description: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -17,6 +18,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   githubUrl,
   websiteUrl,
   technologies,
+  description,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -31,12 +33,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className="absolute inset-0 z-0"></div>
       <div className="relative p-4 sm:p-6 z-10">
         <div className="relative">
-          <h3 className="text-lg sm:text-xl font-semibold mb-2 text-center">{title}</h3>
+          <h3 className="text-lg sm:text-xl font-semibold mb-3 text-center">{title}</h3>
           <img
             className={`w-full rounded-xl transition-filter duration-300 ${isHovered ? 'blur-sm' : ''}`}
             src={imageUrl}
             alt={title}
-            style={{ height: '200px', objectFit: 'cover' }}
+            style={{ height: '250px', objectFit: 'cover' }}
           />
         </div>
         {isHovered && (
@@ -60,6 +62,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </a>
           </div>
         )}
+      </div>
+      <div className="px-4 sm:px-6 mb-4">
+        <p className="text-sm text-gray-400 text-center line-clamp-3">{description}</p>
       </div>
       <div className="p-4 sm:p-6 flex flex-wrap">
         {technologies.map((tech) => (

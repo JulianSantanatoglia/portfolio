@@ -41,6 +41,7 @@ export interface Project {
   githubUrl: string;
   websiteUrl: string;
   technologies: string[];
+  description: string;
 }
 
 export const projects: Project[] = [
@@ -57,6 +58,7 @@ export const projects: Project[] = [
       "TypeScript",
       "Tailwind CSS",
     ],
+    description: "Plataforma de venta de entradas para eventos musicales"
   },
   {
     imageUrl: "mushroom.png",
@@ -72,6 +74,7 @@ export const projects: Project[] = [
       "TypeScript",
       "Firebase",
     ],
+    description: "Alquiler de sonido y cabinas de dj"
   },
   {
     imageUrl: "greenbank.png",
@@ -87,6 +90,7 @@ export const projects: Project[] = [
       "TypeScript",
       "Firebase",
     ],
+    description: "Aplicación bancaria moderna con interfaz intuitiva"
   },
   {
     imageUrl: "planeandoando.png",
@@ -102,6 +106,7 @@ export const projects: Project[] = [
       "TypeScript",
       "Firebase",
     ],
+    description: "Plataforma de planificación de viajes"
   },
   {
     imageUrl: "billulla.png",
@@ -117,6 +122,7 @@ export const projects: Project[] = [
       "TypeScript",
       "Firebase",
     ],
+    description: "Facilita el control financiero y la organización de documentos."
   },
   {
     imageUrl: "arquitecturamoderna.png",
@@ -132,6 +138,7 @@ export const projects: Project[] = [
       "TypeScript",
       "Firebase",
     ],
+    description: "Portfolio de arquitectura que muestra proyectos residenciales y comerciales."
   },
   {
     imageUrl: "jsport.png",
@@ -147,6 +154,7 @@ export const projects: Project[] = [
       "TypeScript",
       "Firebase",
     ],
+    description: "E-commerce especializado en artículos deportivos"
   },
   {
     imageUrl: "cafeteriaalmeria.png",
@@ -154,6 +162,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/JulianSantanatoglia/cafeteriaalmeria",
     websiteUrl: "https://juliansantanatoglia.github.io/cafeteriaalmeria/",
     technologies: ["HTML", "CSS", "SASS", "Javascript"],
+    description: "Sitio web para cafetería con menú interactivo"
   },
   {
     imageUrl: "escueladecocina.png",
@@ -161,6 +170,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/JulianSantanatoglia/escueladecocina",
     websiteUrl: "https://juliansantanatoglia.github.io/escueladecocina/",
     technologies: ["HTML", "CSS", "SASS", "Javascript"],
+    description: "Plataforma educativa para cursos de cocina"
   },
   {
     imageUrl: "deliveryapp.png",
@@ -168,20 +178,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/JulianSantanatoglia/deliveryapp",
     websiteUrl: "https://juliansantanatoglia.github.io/deliveryapp/",
     technologies: ["HTML", "CSS", "SASS", "Javascript"],
-  },
-  {
-    imageUrl: "greenbank.png",
-    title: "GREEN BANK",
-    githubUrl: "https://github.com/JulianSantanatoglia/GreenBank",
-    websiteUrl: "https://juliansantanatoglia.github.io/GreenBank/",
-    technologies: [
-      "HTML",
-      "CSS",
-      "Bootstrap",
-      "Javascript",
-      "React",
-      "TypeScript",
-    ],
+    description: "Aplicación de delivery de comida"
   },
   {
     imageUrl: "joyeriadiaz.png",
@@ -189,6 +186,7 @@ export const projects: Project[] = [
     githubUrl: "https://joyeriadiaz.shop/",
     websiteUrl: "https://joyeriadiaz.shop/",
     technologies: ["Wordpress", "WooCommerce", "Blocksy"],
+    description: "E-commerce de joyería"
   },
   {
     imageUrl: "guitarla.png",
@@ -196,13 +194,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/JulianSantanatoglia/ecommerce_guitar",
     websiteUrl: "https://ecommerce-guitar-psi.vercel.app/",
     technologies: ["HTML", "CSS", "SASS", "Javascript", "React"],
-  },
-  {
-    imageUrl: "arquitecturamoderna.png",
-    title: "ARQUITECTURA MODERNA",
-    githubUrl: "https://github.com/JulianSantanatoglia/arquitecturamoderna",
-    websiteUrl: "https://arquitecturamoderna.vercel.app/",
-    technologies: ["HTML", "CSS", "SASS", "Javascript"],
+    description: "Tienda online especializada en instrumentos musicales"
   },
 ];
 // ##########################################################

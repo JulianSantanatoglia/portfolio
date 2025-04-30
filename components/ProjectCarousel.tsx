@@ -34,19 +34,29 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const totalPages = Math.ceil(projects.length / projectsPerPage);
-
   const nextSlide = () => {
     if (isAnimating) return;
     setIsAnimating(true);
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalPages);
+    setCurrentIndex((prevIndex) => {
+      const nextIndex = prevIndex + 1;
+      if (nextIndex >= projects.length) {
+        return 0;
+      }
+      return nextIndex;
+    });
     setTimeout(() => setIsAnimating(false), 500);
   };
 
   const prevSlide = () => {
     if (isAnimating) return;
     setIsAnimating(true);
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + totalPages) % totalPages);
+    setCurrentIndex((prevIndex) => {
+      const nextIndex = prevIndex - 1;
+      if (nextIndex < 0) {
+        return projects.length - 1;
+      }
+      return nextIndex;
+    });
     setTimeout(() => setIsAnimating(false), 500);
   };
 
@@ -72,6 +82,9 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
     setIsDragging(false);
   };
 
+  // Calculate the current page based on the current index
+  const currentPage = Math.floor(currentIndex / projectsPerPage);
+
   return (
     <div className="relative w-full py-8">
       <div className="flex items-center justify-center gap-2 md:gap-4">
@@ -83,12 +96,12 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
           <ChevronLeft size={20} className="md:w-7 md:h-7" />
         </button>
 
-        <div className="overflow-hidden w-full max-w-5xl px-8 md:px-0">
+        <div className="overflow-hidden w-full max-w-6xl px-8 md:px-0">
           <div
             ref={carouselRef}
             className="flex transition-transform duration-700 ease-out"
             style={{
-              transform: `translateX(-${currentIndex * (100 / projectsPerPage)}%)`,
+              transform: `translateX(-${currentPage * 100}%)`,
               cursor: isDragging ? 'grabbing' : 'grab'
             }}
             onMouseDown={handleMouseDown}
@@ -99,15 +112,16 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className={`${projectsPerPage === 1 ? 'w-full' : projectsPerPage === 2 ? 'w-1/2' : 'w-1/3'} flex-shrink-0 px-1 md:px-3`}
+                className={`${projectsPerPage === 1 ? 'w-full' : projectsPerPage === 2 ? 'w-1/2' : 'w-1/3'} flex-shrink-0 px-2 md:px-4`}
               >
-                <div className="h-[450px]">
+                <div className="h-[550px]">
                   <ProjectCard
                     imageUrl={project.imageUrl}
                     title={project.title}
                     githubUrl={project.githubUrl}
                     websiteUrl={project.websiteUrl}
                     technologies={project.technologies}
+                    description={project.description}
                   />
                 </div>
               </div>
@@ -126,7 +140,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
 
       {/* Pagination dots */}
       <div className="flex justify-center gap-2 mt-8 mb-4">
-        {Array.from({ length: totalPages }).map((_, index) => (
+        {projects.map((_, index) => (
           <button
             key={index}
             onClick={() => {
