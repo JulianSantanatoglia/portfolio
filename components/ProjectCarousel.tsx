@@ -38,7 +38,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
     if (isAnimating) return;
     setIsAnimating(true);
     setCurrentIndex((prevIndex) => {
-      const nextIndex = prevIndex + 1;
+      const nextIndex = prevIndex + projectsPerPage;
       if (nextIndex >= projects.length) {
         return 0;
       }
@@ -51,9 +51,9 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
     if (isAnimating) return;
     setIsAnimating(true);
     setCurrentIndex((prevIndex) => {
-      const nextIndex = prevIndex - 1;
+      const nextIndex = prevIndex - projectsPerPage;
       if (nextIndex < 0) {
-        return projects.length - 1;
+        return Math.max(0, projects.length - projectsPerPage);
       }
       return nextIndex;
     });
@@ -82,8 +82,11 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
     setIsDragging(false);
   };
 
-  // Calculate the current page based on the current index
-  const currentPage = Math.floor(currentIndex / projectsPerPage);
+  // Calculate visible projects
+  const visibleProjects = projects.slice(
+    currentIndex,
+    currentIndex + projectsPerPage
+  );
 
   return (
     <div className="relative w-full py-8">
@@ -101,7 +104,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
             ref={carouselRef}
             className="flex transition-transform duration-700 ease-out"
             style={{
-              transform: `translateX(-${currentPage * 100}%)`,
+              transform: `translateX(-${currentIndex * (100 / projectsPerPage)}%)`,
               cursor: isDragging ? 'grabbing' : 'grab'
             }}
             onMouseDown={handleMouseDown}

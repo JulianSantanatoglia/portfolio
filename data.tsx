@@ -74,7 +74,7 @@ export const projects: Project[] = [
       "TypeScript",
       "Firebase",
     ],
-    description: "Alquiler de sonido y cabinas de dj"
+    description: "Alquiler de sonido y cabinas de dj para grabar sets"
   },
   {
     imageUrl: "greenbank.png",
@@ -134,11 +134,8 @@ export const projects: Project[] = [
       "CSS",
       "Bootstrap",
       "Javascript",
-      "React",
-      "TypeScript",
-      "Firebase",
     ],
-    description: "Portfolio de arquitectura que muestra proyectos residenciales y comerciales."
+    description: "Pagina web de arquitectura moderna con galeria de proyectos"
   },
   {
     imageUrl: "jsport.png",
