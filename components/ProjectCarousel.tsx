@@ -111,12 +111,6 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
     }
   };
 
-  // Calculate visible projects
-  const visibleProjects = projects.slice(
-    currentIndex,
-    currentIndex + projectsPerPage
-  );
-
   return (
     <div className="relative w-full py-8">
       <div className="flex items-center justify-center gap-2 md:gap-4">

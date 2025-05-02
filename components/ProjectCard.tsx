@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Github } from 'lucide-react';
+import Image from 'next/image';
 
 interface ProjectCardProps {
   imageUrl: string;
@@ -34,12 +35,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className="relative p-4 sm:p-6 z-10">
         <div className="relative">
           <h3 className="text-lg sm:text-xl font-semibold mb-3 text-center">{title}</h3>
-          <img
-            className={`w-full rounded-xl transition-filter duration-300 ${isHovered ? 'blur-sm' : ''}`}
-            src={imageUrl}
-            alt={title}
-            style={{ height: '250px', objectFit: 'cover' }}
-          />
+          <div className="relative w-full h-[250px]">
+            <Image
+              className={`rounded-xl transition-filter duration-300 ${isHovered ? 'blur-sm' : ''}`}
+              src={imageUrl}
+              alt={title}
+              fill
+              style={{ objectFit: 'cover' }}
+            />
+          </div>
         </div>
         {isHovered && (
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center space-x-2 sm:space-x-4 z-30">
