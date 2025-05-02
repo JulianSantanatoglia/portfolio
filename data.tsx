@@ -241,7 +241,7 @@ export const itemsTimeline = [
     company: "Freelance",
     date: "Marzo 2023 - Actualidad",
     description:
-      "Diseño y desarrollo de páginas web funcionales, accesibles y modernas utilizando HTML, CSS, Bootstrap, JavaScript, React, Github, SASS, Hosting y dominio, certificado SSL, Firebase, WordPress, Elementor, Blocksy, plataformas de pago y autenticación.",
+      "He desarrollado plataformas completas, incluyendo ecommerce, web de reservas, blogs, cartas para cafes, app de control de gastos, planificador de viajes, plataforma de cursos, y más. También, he colaborado eficazmente en proyectos existentes, aportando mi experiencia en diseño UI/UX para optimizar la experiencia del usuario y garantizar la adaptabilidad a distintos dispositivos. ",
   },
   {
     title: "Carrera de Desarrollo Web Frontend",

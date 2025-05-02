@@ -16,6 +16,8 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
   const [isDragging, setIsDragging] = useState(false);
   const [projectsPerPage, setProjectsPerPage] = useState(3);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
   // Update projects per page based on screen size
   useEffect(() => {
@@ -44,7 +46,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
       }
       return nextIndex;
     });
-    setTimeout(() => setIsAnimating(false), 500);
+    setTimeout(() => setIsAnimating(false), 300);
   };
 
   const prevSlide = () => {
@@ -57,7 +59,26 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
       }
       return nextIndex;
     });
-    setTimeout(() => setIsAnimating(false), 500);
+    setTimeout(() => setIsAnimating(false), 300);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    const diff = touchStartX.current - touchEndX.current;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -68,7 +89,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging) return;
     const diff = startX - e.clientX;
-    if (Math.abs(diff) > 100) {
+    if (Math.abs(diff) > 50) {
       if (diff > 0) {
         nextSlide();
       } else {
@@ -80,6 +101,14 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
 
   const handleMouseUp = () => {
     setIsDragging(false);
+  };
+
+  const handleDotClick = (index: number) => {
+    if (!isAnimating) {
+      setIsAnimating(true);
+      setCurrentIndex(index);
+      setTimeout(() => setIsAnimating(false), 300);
+    }
   };
 
   // Calculate visible projects
@@ -102,7 +131,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
         <div className="overflow-hidden w-full max-w-6xl px-8 md:px-0">
           <div
             ref={carouselRef}
-            className="flex transition-transform duration-700 ease-out"
+            className="flex transition-transform duration-300 ease-out"
             style={{
               transform: `translateX(-${currentIndex * (100 / projectsPerPage)}%)`,
               cursor: isDragging ? 'grabbing' : 'grab'
@@ -111,6 +140,9 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
           >
             {projects.map((project, index) => (
               <div
@@ -143,18 +175,12 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
 
       {/* Pagination dots */}
       <div className="flex justify-center gap-2 mt-8 mb-4">
-        {projects.map((_, index) => (
+        {Array.from({ length: Math.ceil(projects.length / projectsPerPage) }).map((_, index) => (
           <button
             key={index}
-            onClick={() => {
-              if (!isAnimating) {
-                setIsAnimating(true);
-                setCurrentIndex(index);
-                setTimeout(() => setIsAnimating(false), 500);
-              }
-            }}
+            onClick={() => handleDotClick(index * projectsPerPage)}
             className={`h-2 rounded-full transition-all duration-300 ${
-              index === currentIndex
+              index === Math.floor(currentIndex / projectsPerPage)
                 ? 'bg-blue-500 w-6'
                 : 'bg-gray-600 w-2 hover:bg-gray-500'
             }`}
