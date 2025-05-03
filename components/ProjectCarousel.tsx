@@ -19,15 +19,14 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
 
-  // Update projects per page based on screen size
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setProjectsPerPage(1);
       } else if (window.innerWidth < 1024) {
-        setProjectsPerPage(2);
+        setProjectsPerPage(1);
       } else {
-        setProjectsPerPage(3);
+        setProjectsPerPage(2);
       }
     };
 
@@ -122,7 +121,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
           <ChevronLeft size={20} className="md:w-7 md:h-7" />
         </button>
 
-        <div className="overflow-hidden w-full max-w-6xl px-8 md:px-0">
+        <div className="overflow-hidden w-full max-w-7xl px-8 md:px-0">
           <div
             ref={carouselRef}
             className="flex transition-transform duration-300 ease-out"
@@ -141,9 +140,9 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className={`${projectsPerPage === 1 ? 'w-full' : projectsPerPage === 2 ? 'w-1/2' : 'w-1/3'} flex-shrink-0 px-2 md:px-4`}
+                className={`${projectsPerPage === 1 ? 'w-full' : 'w-1/2'} flex-shrink-0 px-2 md:px-4`}
               >
-                <div className="h-[550px]">
+                <div className="h-[450px]">
                   <ProjectCard
                     imageUrl={project.imageUrl}
                     title={project.title}
@@ -167,7 +166,6 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
         </button>
       </div>
 
-      {/* Pagination dots */}
       <div className="flex justify-center gap-2 mt-8 mb-4">
         {Array.from({ length: Math.ceil(projects.length / projectsPerPage) }).map((_, index) => (
           <button

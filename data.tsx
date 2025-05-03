@@ -34,7 +34,7 @@ export const socialNetworks = [
     src: "mailto:juliansantanatoglia@gmail.com",
   },
 ];
-// ########################################################
+
 export interface Project {
   imageUrl: string;
   title: string;
@@ -46,7 +46,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    imageUrl: "eventloop.png",
+    imageUrl: "/eventloop.png",
     title: "EVENT LOOP",
     githubUrl: "#",
     websiteUrl: "https://eventloop.club/",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     description: "Plataforma de venta de entradas para eventos musicales"
   },
   {
-    imageUrl: "mushroom.png",
+    imageUrl: "/mushroom.png",
     title: "Mushroom Mdp",
     githubUrl: "https://github.com/JulianSantanatoglia/mushroommdp",
     websiteUrl: "https://mushroom-mdp.netlify.app/",
@@ -77,7 +77,7 @@ export const projects: Project[] = [
     description: "Alquiler de sonido y cabinas de dj para grabar sets"
   },
   {
-    imageUrl: "greenbank.png",
+    imageUrl: "/greenbank.png",
     title: "Green Bank",
     githubUrl: "https://github.com/JulianSantanatoglia/GreenBank",
     websiteUrl: "https://green-bank-liard.vercel.app/",
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     description: "Aplicación bancaria moderna con interfaz intuitiva"
   },
   {
-    imageUrl: "planeandoando.png",
+    imageUrl: "/planeandoando.png",
     title: "Planeandoando",
     githubUrl: "https://github.com/JulianSantanatoglia/planeandoando",
     websiteUrl: "https://planeandoando.netlify.app/",
@@ -109,7 +109,7 @@ export const projects: Project[] = [
     description: "Plataforma de planificación de viajes"
   },
   {
-    imageUrl: "billulla.png",
+    imageUrl: "/billulla.png",
     title: "Billulla",
     githubUrl: "https://github.com/JulianSantanatoglia/billulla",
     websiteUrl: "https://billulla.netlify.app/",
@@ -125,7 +125,7 @@ export const projects: Project[] = [
     description: "Facilita el control financiero y la organización de documentos."
   },
   {
-    imageUrl: "arquitecturamoderna.png",
+    imageUrl: "/arquitecturamoderna.png",
     title: "Arquitectura Moderna",
     githubUrl: "https://github.com/JulianSantanatoglia/arquitecturamoderna",
     websiteUrl: "https://arquitecturamoderna.vercel.app/",
@@ -138,7 +138,7 @@ export const projects: Project[] = [
     description: "Pagina web de arquitectura moderna con galeria de proyectos"
   },
   {
-    imageUrl: "jsport.png",
+    imageUrl: "/jsport.png",
     title: "JSPORT",
     githubUrl: "https://github.com/JulianSantanatoglia/jsport",
     websiteUrl: "https://jstore-three.vercel.app/",
@@ -154,7 +154,7 @@ export const projects: Project[] = [
     description: "E-commerce especializado en artículos deportivos"
   },
   {
-    imageUrl: "cafeteriaalmeria.png",
+    imageUrl: "/cafeteriaalmeria.png",
     title: "CAFETERIA ALMERIA",
     githubUrl: "https://github.com/JulianSantanatoglia/cafeteriaalmeria",
     websiteUrl: "https://juliansantanatoglia.github.io/cafeteriaalmeria/",
@@ -162,7 +162,7 @@ export const projects: Project[] = [
     description: "Sitio web para cafetería con menú interactivo"
   },
   {
-    imageUrl: "escueladecocina.png",
+    imageUrl: "/escueladecocina.png",
     title: "ESCUELA DE COCINA",
     githubUrl: "https://github.com/JulianSantanatoglia/escueladecocina",
     websiteUrl: "https://juliansantanatoglia.github.io/escueladecocina/",
@@ -170,7 +170,7 @@ export const projects: Project[] = [
     description: "Plataforma educativa para cursos de cocina"
   },
   {
-    imageUrl: "deliveryapp.png",
+    imageUrl: "/deliveryapp.png",
     title: "DELIVERY APP",
     githubUrl: "https://github.com/JulianSantanatoglia/deliveryapp",
     websiteUrl: "https://juliansantanatoglia.github.io/deliveryapp/",
@@ -178,7 +178,7 @@ export const projects: Project[] = [
     description: "Aplicación de delivery de comida"
   },
   {
-    imageUrl: "joyeriadiaz.png",
+    imageUrl: "/joyeriadiaz.png",
     title: "JOYERIA DIAZ",
     githubUrl: "https://joyeriadiaz.shop/",
     websiteUrl: "https://joyeriadiaz.shop/",
@@ -186,7 +186,7 @@ export const projects: Project[] = [
     description: "E-commerce de joyería"
   },
   {
-    imageUrl: "guitarla.png",
+    imageUrl: "/guitarla.png",
     title: "GUITAR LA",
     githubUrl: "https://github.com/JulianSantanatoglia/ecommerce_guitar",
     websiteUrl: "https://ecommerce-guitar-psi.vercel.app/",
@@ -194,12 +194,12 @@ export const projects: Project[] = [
     description: "Tienda online especializada en instrumentos musicales"
   },
 ];
-// ##########################################################
+
 export const itemsNavbar = [
   {
     id: 1,
     title: "About me",
-    icon: <User size={25} color="#fff" strokeWidth={1} />, // Icono de persona (User)
+    icon: <User size={25} color="#fff" strokeWidth={1} />,
     link: "#introduction",
   },
   {
@@ -223,7 +223,7 @@ export const itemsNavbar = [
   {
     id: 5,
     title: "Contact",
-    icon: <Contact size={25} color="#fff" strokeWidth={1} />, // Icono de email (Mail)
+    icon: <Contact size={25} color="#fff" strokeWidth={1} />,
     link: "#contact",
   },
 ];
