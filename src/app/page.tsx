@@ -22,8 +22,8 @@ export default function Home() {
         <div className="flex min-h-screen bg-no-repeat bg-gradient-cover bg-gray-900 overflow-x-hidden">
           <Introduction />
         </div>
-        <Skills />
         <Timeline />
+        <Skills />
         <Certifications />
         <div id="portfolio" className="text-center mb-10 pt-10">
           <h2 className="text-3xl font-semibold tracking-tight uppercase text-gray-100 mb-2">

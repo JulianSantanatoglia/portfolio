@@ -58,7 +58,7 @@ const Introduction = () => {
               Ver trabajos
             </Link>
             <Link
-              href="https://docs.google.com/document/d/e/2PACX-1vTwXzAINM7Nmgm1Pus3QPYtM6duus2Zn4qKhL7m5bgQTbXpmzDAlMB2xipI_AHeew/pub"
+              href="https://docs.google.com/document/d/e/2PACX-1vQ-By5TvYJfDYxkHmlmtiCQ5Crk-xkpTXCEZlcDyQCEufLNIRL5ntdo5anlJ9usMsP0c4IfjxjLdmAJ/pub"
               className="px-4 py-2 transition-all border-2 cursor-pointer text-white bg-blue-950/80  border-white-500 text-md w-fit rounded-xl hover:shadow-xl hover:shadow-blue-500"
               download="cv-jsantanatoglia-SPA.pdf"
               target="_blank"

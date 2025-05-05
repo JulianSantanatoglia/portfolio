@@ -236,6 +236,13 @@ export const itemsNavbar = [
 
 export const itemsTimeline = [
   {
+    title: "Full-stack Developer",
+    company: "Mushroom Mdp",
+    date: "Feb 2025 - Actualidad",
+    description:
+      "En Mushroom-MDP, plataforma de alquiler de equipos y cabinas de DJ, soy responsable del desarrollo fullstack completo. Utilizo React.js con hooks y Context API, estilando con Tailwind CSS e integrando Firebase para autenticación y base de datos en tiempo real. He implementado un sistema de reservas con FullCalendar, animaciones con Framer Motion, formularios interactivos y optimización SEO. También desarrollé la gestión de reservas de cabinas con diferentes equipamientos, un panel de administración, integración multimedia y un sistema de contacto, todo optimizado para móvil y desktop",
+  },
+  {
     title: "Frontend Developer",
     company: "EventLoop",
     date: "Abril 2024 - Actualidad",
