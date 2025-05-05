@@ -40,7 +40,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className="relative p-4 sm:p-6 z-10">
         <div className="relative">
           <h3 className="text-lg sm:text-xl font-semibold mb-3 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">{title}</h3>
-          <div className="relative w-full h-[200px] sm:h-[200px] group overflow-hidden rounded-xl">
+          <div className="relative w-full h-[180px] sm:h-[200px] group overflow-hidden rounded-xl">
             <div className={`absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
             <div className={`absolute inset-0 backdrop-blur-sm transition-opacity duration-500 ${isHovered ? 'opacity-30' : 'opacity-0'}`}></div>
             

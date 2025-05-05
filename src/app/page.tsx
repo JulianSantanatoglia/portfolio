@@ -9,6 +9,7 @@ import Skills from "../../components/skills";
 import Timeline from "../../components/timeline";
 import TransitionPage from "../../components/transition-page";
 import ProjectCarousel from "../../components/ProjectCarousel";
+import Certifications from "../../components/certifications";
 import { projects } from "../../data";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
         </div>
         <Skills />
         <Timeline />
+        <Certifications />
         <div id="portfolio" className="text-center mb-10 pt-10">
           <h2 className="text-3xl font-semibold tracking-tight uppercase text-gray-100 mb-2">
             Trabajos

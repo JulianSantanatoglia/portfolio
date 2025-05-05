@@ -47,7 +47,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     imageUrl: "/eventloop.png",
-    title: "EVENT LOOP",
+    title: "Event Loop",
     githubUrl: "#",
     websiteUrl: "https://eventloop.club/",
     technologies: [
@@ -139,7 +139,7 @@ export const projects: Project[] = [
   },
   {
     imageUrl: "/jsport.png",
-    title: "JSPORT",
+    title: "jsport",
     githubUrl: "https://github.com/JulianSantanatoglia/jsport",
     websiteUrl: "https://jstore-three.vercel.app/",
     technologies: [
@@ -155,7 +155,7 @@ export const projects: Project[] = [
   },
   {
     imageUrl: "/cafeteriaalmeria.png",
-    title: "CAFETERIA ALMERIA",
+    title: "Cafeteria Almeria",
     githubUrl: "https://github.com/JulianSantanatoglia/cafeteriaalmeria",
     websiteUrl: "https://juliansantanatoglia.github.io/cafeteriaalmeria/",
     technologies: ["HTML", "CSS", "SASS", "Javascript"],
@@ -163,7 +163,7 @@ export const projects: Project[] = [
   },
   {
     imageUrl: "/escueladecocina.png",
-    title: "ESCUELA DE COCINA",
+    title: "Escuela de cocina",
     githubUrl: "https://github.com/JulianSantanatoglia/escueladecocina",
     websiteUrl: "https://juliansantanatoglia.github.io/escueladecocina/",
     technologies: ["HTML", "CSS", "SASS", "Javascript"],
@@ -171,7 +171,7 @@ export const projects: Project[] = [
   },
   {
     imageUrl: "/deliveryapp.png",
-    title: "DELIVERY APP",
+    title: "Delivery App",
     githubUrl: "https://github.com/JulianSantanatoglia/deliveryapp",
     websiteUrl: "https://juliansantanatoglia.github.io/deliveryapp/",
     technologies: ["HTML", "CSS", "SASS", "Javascript"],
@@ -179,7 +179,7 @@ export const projects: Project[] = [
   },
   {
     imageUrl: "/joyeriadiaz.png",
-    title: "JOYERIA DIAZ",
+    title: "Joyeria Diaz",
     githubUrl: "https://joyeriadiaz.shop/",
     websiteUrl: "https://joyeriadiaz.shop/",
     technologies: ["Wordpress", "WooCommerce", "Blocksy"],
@@ -187,7 +187,7 @@ export const projects: Project[] = [
   },
   {
     imageUrl: "/guitarla.png",
-    title: "GUITAR LA",
+    title: "Guitar LA",
     githubUrl: "https://github.com/JulianSantanatoglia/ecommerce_guitar",
     websiteUrl: "https://ecommerce-guitar-psi.vercel.app/",
     technologies: ["HTML", "CSS", "SASS", "Javascript", "React"],
@@ -216,12 +216,18 @@ export const itemsNavbar = [
   },
   {
     id: 4,
+    title: "Certifications",
+    icon: <Book size={25} color="#fff" strokeWidth={1} />,
+    link: "#certifications",
+  },
+  {
+    id: 5,
     title: "GalleryVerticalEnd",
     icon: <GalleryVerticalEnd size={25} color="#fff" strokeWidth={1} />,
     link: "#portfolio",
   },
   {
-    id: 5,
+    id: 6,
     title: "Contact",
     icon: <Contact size={25} color="#fff" strokeWidth={1} />,
     link: "#contact",
@@ -249,14 +255,109 @@ export const itemsTimeline = [
     date: "Marzo 2023",
     description:
       "Conceptos de Desarrollo Web como HTML, CSS Box Modeling y Flexbox, Grids, Pseudoclases, Bootstrap, Git y GitHub, SASS, Animaciones CSS, SEO y servidores, K&C." +
-      " Luego en Javascript: Control de ciclos, funciones, arrays, objetos, funciones del orden superior, DOM y eventos, Asincronismo y peticiones, After DOM, promesas y librerías" +
-      " y por ultimo en React: JSX, transpiling y componentes, promises, asincronía y MAP, consumiendo APIs, Hooks, children y patrones, Routing, navegación y eventos, Context y técnicas de rendering y Firebase",
+      " Luego en Javascript: Control de ciclos, funciones, arrays, objetos, funciones del orden superior, DOM y eventos, Asincronismo y peticiones, After DOM, promesas y librerías." +
+      " Por ultimo en React: JSX, transpiling y componentes, promises, asincronía y MAP, consumiendo APIs, Hooks, children y patrones, Routing, navegación y eventos, Context y técnicas de rendering y Firebase.",
   },
   {
-    title: "RT & Embajador de Android",
-    company: "Orange",  
-    date: "Agosto 2021 - Actualidad",
+    title: "Tecnico en informatica profesional y personal",
+    company: "Técnica 3 Necochea (ARG)",  
+    date: "Diciembre 2012",
     description:
-      "Asesor comercial, control de objetivos y KPIs de tienda, logística, formación al nuevo personal sobre distintos software de tramitación y gestión de la tienda. Informar a los clientes sobre las nuevas funciones de las aplicaciones de Google y las actualizaciones del sistema operativo Android",
+      "Escuela de nivel secundario graduado en Tecnico en informatica profesional y personal, con conocimientos en hardware, software, redes, sistemas operativos, seguridad informática, y soporte técnico.",
   },
+];
+
+export interface Certification {
+  imageUrl: string;
+  title: string;
+  company: string;
+  date: string;
+  credentialUrl: string;
+}
+
+export const certifications: Certification[] = [
+  {
+    imageUrl: "/certs/web-coder.png",
+    title: "Desarrollo Web",
+    company: "Coderhouse",
+    date: "Febrero 2024",
+    credentialUrl: "#"
+  },
+  {
+    imageUrl: "/certs/js-coder.png",
+    title: "JavaScript",
+    company: "Coderhouse",
+    date: "Mayo 2024",
+    credentialUrl: "#"
+  },
+  {
+    imageUrl: "/certs/react-coder.png",
+    title: "React JS",
+    company: "Coderhouse",
+    date: "Agosto 2024",
+    credentialUrl: "#"
+  },
+  {
+    imageUrl: "/certs/css-udemy.png",
+    title: "CSS La guía Completa",
+    company: "Udemy",
+    date: "Octubre 2023",
+    credentialUrl: "#"
+  },
+  {
+    imageUrl: "/certs/test-udemy.png",
+    title: "Software Testing Masterclass",
+    company: "Udemy",
+    date: "Enero 2023",
+    credentialUrl: "#"
+  },
+  {
+    imageUrl: "/certs/ilustrator.png",
+    title: "Adobe Ilustrator",
+    company: "Domestika",
+    date: "Agosto 2021",
+    credentialUrl: "#"
+  },
+  {
+    imageUrl: "/certs/photoshop.png",
+    title: "Adobe Photoshop",
+    company: "Domestika",
+    date: "Julio 2020",
+    credentialUrl: "#"
+  },
+  {
+    imageUrl: "/certs/aftereffect-domestika.png",
+    title: "Adobe After Effects",
+    company: "Domestika",
+    date: "Octubre 2021",
+    credentialUrl: "#"
+  },
+  {
+    imageUrl: "/certs/cinema4d-domestika.png",
+    title: "Cinema 4D",
+    company: "Domestika",
+    date: "Febrero 2021",
+    credentialUrl: "#"
+  },
+  {
+    imageUrl: "/certs/sketchup.png",
+    title: "SketchUp",
+    company: "Domestika",
+    date: "Octubre 2021",
+    credentialUrl: "#"
+  },
+  {
+    imageUrl: "/certs/motion-gra.png",
+    title: "Motion Graphics",
+    company: "Domestika",
+    date: "Octubre 2021",
+    credentialUrl: "#"
+  },
+  {
+    imageUrl: "/certs/secretos.png",
+    title: "Fotomontaje y retoque creativo",
+    company: "Domestika",
+    date: "Octubre 2021",
+    credentialUrl: "#"
+  }
 ];

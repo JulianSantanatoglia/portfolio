@@ -8,8 +8,8 @@ const Introduction = () => {
   return (
     <div id="introduction" className="z-20 w-full bg-darkBg/60">
       <div className="gap-8 z-20 grid items-center h-full p-4 py-10 md:py-10 lg:grid-cols-2">
-        <div className="flex justify-center lg:justify-end lg:pr-20 xl:pr-40 pt-16 md:pt-0">
-          <div className="w-full max-w-[300px]">
+        <div className="flex justify-center lg:justify-end lg:ml-auto lg:mr-15 pt-16 md:pt-0">
+          <div className="w-full max-w-[300px] flex justify-end">
             <div className="p-2 bg-gradient-to-r from-blue-500 to-blue-950 rounded-full inline-block">
               <div className="p-1 bg-white rounded-full transition-transform duration-300 hover:scale-105">
                 <Image
@@ -25,20 +25,19 @@ const Introduction = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-center max-w-2xl">
+        <div className="flex flex-col justify-center max-w-2xl lg:max-w-xl">
           <h1 className="mb-4 text-2xl sm:text-lg leading-tight text-center md:text-left md:text-4xl lg:text-5xl text-balance">
-            Si tienes una idea,
+            ¡Hola, Soy Julián!
             <br className="md:block" />
-            podemos
+            Web
             <br className="block md:hidden" />
             <TypeAnimation
               sequence={[
-                " diseñarla",
+                " Developer",
                 1500,
-                " desarrollarla",
+                " Designer",
                 1500,
-                " desplegarla",
-                1500,
+          
               ]}
               wrapper="span"
               speed={40}
@@ -49,7 +48,7 @@ const Introduction = () => {
           </h1>
           <Experience />
           <p className="mx-auto mb-4 text-base md:mx-0 md:mb-10 mb-13 mt-8 lg:text-xl px-4 sm:px-0 text-center sm:text-left">
-            ¡Hola!👋 Soy Desarrollador Frontend apasionado por crear sitios web modernos y funcionales con la mejor experiencia de usuario y diseños atractivos. Tengo conocimientos en backend y habilidades en diseño. ¡Mira mi trabajo!
+          Desarrollador web frontend con experiencia en la creación de interfaces de usuario modernas y funcionales, priorizando la optimización de la experiencia del usuario (UX) y la estética visual. Poseo conocimientos sólidos en el desarrollo backend, complementados con habilidades en diseño UI/UX. ¡Mira mi trabajo!
           </p>
           <div className="flex items-center justify-center gap-4 md:justify-start md:gap-8 lg:gap-10">
             <Link
