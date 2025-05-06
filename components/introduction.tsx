@@ -27,7 +27,7 @@ const Introduction = () => {
         </div>
         <div className="flex flex-col justify-center max-w-2xl lg:max-w-xl">
           <h1 className="mb-4 text-2xl sm:text-lg leading-tight text-center md:text-left md:text-4xl lg:text-5xl text-balance">
-            ¡Hola, Soy Julián!
+            ¡Hola, soy Julián!
             <br className="md:block" />
             Web
             <br className="block md:hidden" />
@@ -48,7 +48,7 @@ const Introduction = () => {
           </h1>
           <Experience />
           <p className="mx-auto mb-4 text-base md:mx-0 md:mb-10 mb-13 mt-8 lg:text-xl px-4 sm:px-0 text-center sm:text-left">
-          Desarrollador web frontend con experiencia en la creación de interfaces de usuario modernas y funcionales, priorizando la optimización de la experiencia del usuario (UX) y la estética visual. Poseo conocimientos sólidos en el desarrollo backend, complementados con habilidades en diseño UI/UX. ¡Mira mi trabajo!
+          Desarrollador web frontend enfocado en la creación de interfaces de usuario modernas y funcionales, priorizando la optimización de la experiencia del usuario (UX) y la estética visual. Poseo conocimientos sólidos en el desarrollo backend, complementados con habilidades en diseño UI/UX. ¡Mira mi trabajo!
           </p>
           <div className="flex items-center justify-center gap-4 md:justify-start md:gap-8 lg:gap-10">
             <Link

@@ -88,7 +88,7 @@ const Skills = () => {
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="group relative flex flex-col items-center"
+                className="group relative flex flex-col items-center mb-4"
               >
                 <div className="p-3.5 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 transition-all duration-300 group-hover:border-blue-500/50 group-hover:shadow-lg group-hover:shadow-blue-500/10">
                   {React.cloneElement(skill.icon, { className: "h-6.5 w-6.5 transition-transform duration-300 group-hover:scale-110" })}
