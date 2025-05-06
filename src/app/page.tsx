@@ -10,6 +10,7 @@ import Timeline from "../../components/timeline";
 import TransitionPage from "../../components/transition-page";
 import ProjectCarousel from "../../components/ProjectCarousel";
 import Certifications from "../../components/certifications";
+import ScrollToTop from "../../components/scroll-to-top";
 import { projects } from "../../data";
 
 export default function Home() {
@@ -36,6 +37,7 @@ export default function Home() {
         </div>
         <Contact />
         <Footer />
+        <ScrollToTop />
       </main>
     </>
   );

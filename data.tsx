@@ -319,6 +319,13 @@ export const certifications: Certification[] = [
     credentialUrl: "#"
   },
   {
+    imageUrl: "/certs/excel.png",
+    title: "Excel Avanzado",
+    company: "Aibe",
+    date: "Julio 2023",
+    credentialUrl: "#"
+  },
+  {
     imageUrl: "/certs/ilustrator.png",
     title: "Adobe Ilustrator",
     company: "Domestika",
@@ -360,11 +367,4 @@ export const certifications: Certification[] = [
     date: "Octubre 2021",
     credentialUrl: "#"
   },
-  {
-    imageUrl: "/certs/secretos.png",
-    title: "Fotomontaje y retoque creativo",
-    company: "Domestika",
-    date: "Octubre 2021",
-    credentialUrl: "#"
-  }
 ];
