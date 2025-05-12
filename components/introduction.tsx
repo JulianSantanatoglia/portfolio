@@ -48,7 +48,7 @@ const Introduction = () => {
           </h1>
           <Experience />
           <p className="mx-auto mb-4 text-base md:mx-0 md:mb-10 mb-13 mt-8 lg:text-xl px-4 sm:px-0 text-center sm:text-left">
-          Desarrollador web frontend enfocado en la creación de interfaces de usuario modernas y funcionales, priorizando la optimización de la experiencia del usuario (UX) y la estética visual. Poseo conocimientos sólidos en el desarrollo backend, complementados con habilidades en diseño UI/UX. ¡Mira mi trabajo!
+          Desarrollador web frontend enfocado en la creación de interfaces de usuario modernas y funcionales, priorizando la optimización de la experiencia del usuario (UX) y la estética visual. Poseo conocimientos en Backend, complementados con habilidades en diseño UI/UX. ¡Mira mi trabajo!
           </p>
           <div className="flex items-center justify-center gap-4 md:justify-start md:gap-8 lg:gap-10">
             <Link
