@@ -28,7 +28,7 @@ const Introduction = () => {
                     priority
                     width={400}
                     height={400}
-                    alt="Profile pic"
+                    alt="Julian Santanatoglia, desarrollador web frontend especializado en React y Next.js"
                     className="rounded-full"
                     layout="responsive"
                   />
@@ -71,6 +71,7 @@ const Introduction = () => {
                 repeat={Infinity}
                 className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 ml-2"
                 cursor={false}
+                aria-label="Desarrollador, Diseñador, Creador"
               />
             </span>
           </h1>
@@ -89,24 +90,27 @@ const Introduction = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:justify-start md:gap-6 lg:gap-8">
             <Link
               href="#portfolio"
-              className="group relative px-4 py-2.5 sm:px-6 sm:py-3 transition-all cursor-pointer text-sm sm:text-md w-full sm:w-fit rounded-xl overflow-hidden"
+              className="group relative px-4 py-2.5 sm:px-6 sm:py-3 transition-all cursor-pointer text-sm sm:text-md w-full sm:w-fit rounded-xl overflow-hidden focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+              aria-label="Ver mi portfolio de proyectos"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 transition-transform group-hover:scale-110"></div>
               <div className="relative flex items-center justify-center gap-2 text-white font-semibold">
                 <span>Ver trabajos</span>
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </div>
             </Link>
 
             <Link
               href="https://docs.google.com/document/d/e/2PACX-1vQ-By5TvYJfDYxkHmlmtiCQ5Crk-xkpTXCEZlcDyQCEufLNIRL5ntdo5anlJ9usMsP0c4IfjxjLdmAJ/pub"
-              className="group px-4 py-2.5 sm:px-6 sm:py-3 transition-all border-2 cursor-pointer text-white bg-transparent border-gray-600 hover:border-blue-500 text-sm sm:text-md w-full sm:w-fit rounded-xl hover:shadow-xl hover:shadow-blue-500/50 relative overflow-hidden"
+              className="group px-4 py-2.5 sm:px-6 sm:py-3 transition-all border-2 cursor-pointer text-white bg-transparent border-gray-600 hover:border-blue-500 text-sm sm:text-md w-full sm:w-fit rounded-xl hover:shadow-xl hover:shadow-blue-500/50 relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
               download="cv-jsantanatoglia-SPA.pdf"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Descargar mi CV en formato PDF"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <div className="relative flex items-center justify-center gap-2 font-semibold">
-                <Download className="w-4 h-4" />
+                <Download className="w-4 h-4" aria-hidden="true" />
                 <span>Descargar CV</span>
               </div>
             </Link>
