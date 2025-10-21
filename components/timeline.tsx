@@ -1,13 +1,29 @@
 import React from 'react';
 import { itemsTimeline } from '../data';
+import { Briefcase } from 'lucide-react';
 
 const Timeline: React.FC = () => {
   return (
-    <div id="experience" className="flex justify-center items-center min-h-screen bg-gray-900">
-      <div className="w-full max-w-4xl px-4 py-16">
-        <h2 className="text-4xl font-bold text-white text-center mb-12">
-          EVOLUCIÓN PROFESIONAL
-        </h2>
+    <div id="experience" className="relative flex justify-center items-center min-h-screen bg-gray-900 overflow-hidden py-20">
+      {/* Background effects */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="relative w-full max-w-5xl px-4 py-16">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-6">
+            <Briefcase className="w-5 h-5 text-blue-400" />
+            <span className="text-sm text-blue-400 font-medium">Trayectoria Profesional</span>
+          </div>
+          <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 mb-4">
+            Evolución Profesional
+          </h2>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            Mi camino en el desarrollo web y diseño digital
+          </p>
+        </div>
         <div className="relative">
           <div className="absolute w-0.5 h-full left-1/2 transform -translate-x-1/2">
             <div className="absolute inset-0 bg-gradient-to-b from-blue-500 via-blue-400 to-transparent opacity-70"></div>
@@ -38,7 +54,20 @@ const Timeline: React.FC = () => {
                 
                 <h3 className="text-xl font-bold text-white mb-1">{item.title}</h3>
                 {item.company && (
-                  <p className="text-sm text-gray-300 mb-3 font-medium">{item.company}</p>
+                  <p className="text-sm text-gray-300 mb-3 font-medium">
+                    {item.companyUrl ? (
+                      <a 
+                        href={item.companyUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-blue-400 hover:text-blue-300 transition-colors duration-300 hover:underline"
+                      >
+                        {item.company}
+                      </a>
+                    ) : (
+                      item.company
+                    )}
+                  </p>
                 )}
                 <p className="text-sm text-blue-400 mb-4 font-medium">{item.date}</p>
                 <p className="text-gray-300 leading-relaxed">{item.description}</p>

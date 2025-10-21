@@ -64,7 +64,7 @@ export const projects: Project[] = [
     imageUrl: "/mushroom.png",
     title: "Mushroom Mdp",
     githubUrl: "https://github.com/JulianSantanatoglia/mushroommdp",
-    websiteUrl: "https://mushroom-mdp.netlify.app/",
+    websiteUrl: "https://mushroommdp.com",
     technologies: [
       "HTML",
       "CSS",
@@ -75,6 +75,22 @@ export const projects: Project[] = [
       "Firebase",
     ],
     description: "Alquiler de sonido y cabinas de dj para grabar sets"
+  },
+  {
+    imageUrl: "/jsagency.png",
+    title: ".js agency",
+    githubUrl: "https://github.com/JulianSantanatoglia/jsagency",
+    websiteUrl: "https://js-agency.netlify.app/",
+    technologies: [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "Javascript",
+      "React",
+      "TypeScript",
+      "PHP",
+    ],
+    description: "Aplicación de demostración de Nina"
   },
   {
     imageUrl: "/greenbank.png",
@@ -204,27 +220,27 @@ export const itemsNavbar = [
   },
   {
     id: 2,
+    title: "Portfolio",
+    icon: <GalleryVerticalEnd size={25} color="#fff" strokeWidth={1} />,
+    link: "#portfolio",
+  },
+  {
+    id: 3,
     title: "Skills",
     icon: <CodeSquare size={25} color="#fff" strokeWidth={1} />,
     link: "#skills-section",
   },
   {
-    id: 3,
+    id: 4,
     title: "Experience",
     icon: <Workflow size={25} color="#fff" strokeWidth={1} />,
     link: "#experience",
   },
   {
-    id: 4,
+    id: 5,
     title: "Certifications",
     icon: <Book size={25} color="#fff" strokeWidth={1} />,
     link: "#certifications",
-  },
-  {
-    id: 5,
-    title: "GalleryVerticalEnd",
-    icon: <GalleryVerticalEnd size={25} color="#fff" strokeWidth={1} />,
-    link: "#portfolio",
   },
   {
     id: 6,
@@ -238,6 +254,7 @@ export const itemsTimeline = [
   {
     title: "Full-stack Developer",
     company: "Mushroom Mdp",
+    companyUrl: "https://mushroommdp.com",
     date: "Feb 2025 - Actualidad",
     description:
       "En Mushroom-MDP, plataforma de alquiler de equipos y cabinas de DJ, soy responsable del desarrollo fullstack completo. Utilizo React.js con hooks y Context API, estilando con Tailwind CSS e integrando Firebase para autenticación y base de datos en tiempo real. He implementado un sistema de reservas con FullCalendar, animaciones con Framer Motion, formularios interactivos y optimización SEO. También desarrollé la gestión de reservas de cabinas con diferentes equipamientos, un panel de administración, integración multimedia y un sistema de contacto, todo optimizado para móvil y desktop",
@@ -245,6 +262,7 @@ export const itemsTimeline = [
   {
     title: "Frontend Developer",
     company: "EventLoop",
+    companyUrl: "https://eventloop.club",
     date: "Abril 2024 - Actualidad",
     description:
       "Contribuyo en el Frontend de EventLoop, una plataforma de venta de entradas para eventos musicales, mis tareas son implementación y optimización de estilos con CSS, Sass y Tailwind, desarrollo de funcionalidades interactivas con JavaScript y Angular, y gestión de versiones con GitHub.",
