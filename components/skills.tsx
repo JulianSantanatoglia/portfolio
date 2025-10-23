@@ -182,7 +182,7 @@ const Skills = () => {
             <p className="text-gray-400">Años de Experiencia</p>
           </div>
           <div className="bg-gradient-to-br from-pink-500/10 to-rose-500/10 border border-pink-500/20 rounded-2xl p-6 text-center backdrop-blur-sm">
-            <div className="text-4xl font-bold text-pink-400 mb-2">12+</div>
+            <div className="text-4xl font-bold text-pink-400 mb-2">10+</div>
             <p className="text-gray-400">Proyectos Completados</p>
           </div>
         </div>

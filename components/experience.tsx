@@ -10,13 +10,13 @@ const Experience = () => {
             <div className="hidden md:block border-l border-gray-600 h-16 mx-4"></div>
             <div className="block md:hidden border-b border-gray-600 w-16 my-3"></div>
             <div className="text-center mb-4 md:mb-0 w-full md:w-auto">
-              <span className="text-4xl font-bold text-blue-400">+15</span>
+              <span className="text-4xl font-bold text-blue-400">+12</span>
               <p className="mt-1 text-lg font-semibold">PROYECTOS</p>
             </div>
             <div className="hidden md:block border-l border-gray-600 h-16 mx-4"></div>
             <div className="block md:hidden border-b border-gray-600 w-16 my-3"></div>
             <div className="text-center w-full md:w-auto">
-              <span className="text-4xl font-bold text-yellow-400">+10</span>
+              <span className="text-4xl font-bold text-yellow-400">+12</span>
               <p className="mt-1 text-lg font-semibold">CERTIFICACIONES</p>
             </div>
           </div>

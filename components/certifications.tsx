@@ -107,7 +107,7 @@ const Certifications = () => {
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400 mb-2">
-              2024
+              2025
             </div>
             <p className="text-gray-400 text-sm">Última Actualización</p>
           </div>
