@@ -1,6 +1,6 @@
 import React from 'react';
 import { itemsTimeline } from '../data';
-import { Briefcase } from 'lucide-react';
+import { Briefcase, ExternalLink } from 'lucide-react';
 
 const Timeline: React.FC = () => {
   return (
@@ -60,9 +60,10 @@ const Timeline: React.FC = () => {
                         href={item.companyUrl} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-blue-400 hover:text-blue-300 transition-colors duration-300 hover:underline"
+                        className="text-blue-400 hover:text-blue-300 transition-colors duration-300 hover:underline inline-flex items-center gap-1"
                       >
                         {item.company}
+                        <ExternalLink className="w-3 h-3" />
                       </a>
                     ) : (
                       item.company
