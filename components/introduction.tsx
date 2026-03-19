@@ -79,12 +79,13 @@ const Introduction = () => {
           <Experience />
 
           <p className="mx-auto mb-6 text-base md:mx-0 md:mb-10 mt-8 lg:text-lg px-4 sm:px-0 text-center sm:text-left text-gray-300 leading-relaxed">
-            Soy desarrollador web con especialización en frontend, apasionado por crear 
-            <span className="text-blue-400 font-semibold"> experiencias digitales que marquen la diferencia</span>. 
-            Mi enfoque combina código limpio, diseño funcional y una constante búsqueda de la mejor experiencia de usuario. 
-            Aunque mi fuerte es el frontend, también manejo backend y diseño UI/UX, lo que me permite tener una 
-            <span className="text-purple-400 font-semibold"> visión integral de cada proyecto</span>. 
-            ¡Te invito a conocer mi trabajo!
+          Frontend Developer con experiencia en
+            <span className="text-blue-400 font-semibold"> React, JavaScript, TypeScript y Tailwind CSS</span>
+            , enfocado en crear interfaces web modernas, responsivas y funcionales. También cuento con experiencia en
+            <span className="text-purple-400 font-semibold"> testing, mantenimiento de proyectos web y resolución de problemas técnicos</span>. 
+            Me interesa especialmente 
+            <span className="text-purple-400 font-semibold"> combinar desarrollo frontend con automatización e IA aplicada</span>. 
+            para construir soluciones digitales eficientes y con impacto.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:justify-start md:gap-6 lg:gap-8">

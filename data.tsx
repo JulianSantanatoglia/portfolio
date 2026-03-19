@@ -265,7 +265,7 @@ export const itemsTimeline = [
     companyUrl: "https://eventloop.club",
     date: "Abril 2024 - Actualidad",
     description:
-      "Contribuyo en el Frontend de EventLoop, una plataforma de venta de entradas para eventos musicales, mis tareas son implementación y optimización de estilos con CSS, Sass y Tailwind, desarrollo de funcionalidades interactivas con JavaScript y Angular, y gestión de versiones con GitHub.",
+      "Contribuyo en el Frontend de EventLoop, una plataforma de venta de entradas para eventos musicales, mis tareas son implementación y optimización de estilos con CSS, Sass y Tailwind, desarrollo de funcionalidades interactivas con JavaScript y React, y gestión de versiones con GitHub.",
   },
   {
     title: "Desarrollador / Diseñador Web",
