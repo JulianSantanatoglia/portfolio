@@ -38,11 +38,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="relative">
           <h3 className="text-lg sm:text-xl font-semibold mb-3 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">{title}</h3>
           <div className="relative w-full h-[180px] sm:h-[200px] group overflow-hidden rounded-xl">
-            <div className={`absolute inset-0 bg-black/40 transition-opacity duration-500 z-[1] ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
+            <div className={`absolute inset-0 bg-black/55 transition-opacity duration-500 z-[1] ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
             <div className={`absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
             
             <Image
-              className={`rounded-xl transition-all duration-500 ${isHovered ? 'scale-105' : ''}`}
+              className="rounded-xl"
               src={imageUrl}
               alt={title}
               fill
@@ -58,7 +58,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 href={websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 text-sm sm:text-base font-medium text-white/90 bg-white/10 border border-white/25 rounded-lg backdrop-blur-md transition-all duration-300 hover:bg-white/15 hover:border-white/40 hover:text-white"
+                className="px-4 py-2 text-sm sm:text-base font-medium text-white border border-white/30 rounded-lg bg-gray-900/55 backdrop-blur-sm transition-colors duration-300 hover:bg-gray-900/70 hover:border-white/50"
               >
                 Ver demo
               </a>

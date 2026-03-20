@@ -7,13 +7,7 @@ import { motion } from "framer-motion";
 
 const Timeline: React.FC = () => {
   return (
-    <div id="experience" className="relative flex justify-center items-center bg-gray-900 overflow-hidden py-20">
-      {/* Background effects */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
-      </div>
-
+    <div id="experience" className="relative flex justify-center items-center bg-transparent py-20">
       <div className="relative w-full max-w-4xl px-4 py-10">
         <motion.div
           className="text-center mb-12"

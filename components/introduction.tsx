@@ -84,7 +84,7 @@ const Introduction = () => {
             <span className="font-semibold text-purple-400"> resolución de problemas</span> en entornos reales.
             Mi objetivo es crear soluciones claras y efectivas que aporten
             <span className="font-semibold text-blue-400"> valor concreto al negocio</span> y una
-            <span className="font-semibold text-blue-400"> experiencia fluida</span> para cada persona usuaria.
+            <span className="font-semibold text-blue-400"> experiencia fluida</span> para cada usuario.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:justify-start md:gap-6 lg:gap-8">

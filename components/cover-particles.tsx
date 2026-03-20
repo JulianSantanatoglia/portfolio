@@ -16,10 +16,14 @@ const CoverParticles = () => {
 
     return (
         init &&
-        <div className="w-full h-full absolute top-0 left-0 pointer-events-none">
+        <div className="w-full h-full absolute top-0 left-0 pointer-events-none overflow-hidden">
             <Particles
                 id="tsparticles"
+                className="absolute inset-0"
                 options={{
+                    fullScreen: {
+                        enable: false,
+                    },
                     fpsLimit: 60,
                     interactivity: {
                         events: {

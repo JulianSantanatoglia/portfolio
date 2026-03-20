@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 @layer base {
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
   :root {
     --background: #f0f8ff;
     --foreground: #FFFFFF;
@@ -36,11 +41,9 @@
 }
 
 main {
-  /* background: linear-gradient(to right, #0F172A, #000000);  */
-  background: linear-gradient(to bottom right, #1E293B, #374151, #000000);
-  background: radial-gradient(circle, #0F172A, #000000);
-  height: 100vh;
-  height: 100dvh;;
+  background-color: #111827;
+  min-height: 100dvh;
+  overflow-x: hidden;
 }
 
 /* Animations */

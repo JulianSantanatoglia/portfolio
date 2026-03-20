@@ -281,7 +281,7 @@ export const itemsTimeline = [
     companyUrl: "https://eventloop.club",
     date: "Abr 2024 - Actualidad",
     description:
-      "Contribuyo al desarrollo frontend de una plataforma de venta de entradas para eventos musicales. Trabajo en la creación y mejora de interfaces, componentes reutilizables y estilos modernos, manteniendo foco en escalabilidad, consistencia visual y experiencia de usuario. También participo en el flujo colaborativo mediante control de versiones con Git y GitHub.",
+      "Actualmente trabajo como Frontend Developer en una plataforma de venta de entradas para eventos musicales. Me encargo del desarrollo y mejora de interfaces, componentes reutilizables y estilos modernos, priorizando la experiencia de usuario, la consistencia visual y el trabajo colaborativo con Git y GitHub.",
   },
   {
     title: "Frontend Developer",
@@ -289,7 +289,7 @@ export const itemsTimeline = [
     companyUrl: "https://jsagency.es",
     date: "2025 - Actualidad",
     description:
-      "Desarrollé el sitio web de mi agencia digital de forma integral, abarcando estructura, interfaz, responsive design, optimización y despliegue. El proyecto me permitió aplicar criterio visual, desarrollo frontend y organización de contenido para construir una presencia digital moderna, clara y profesional.",
+      "Desarrollo completo de sitio web para agencia digital, abarcando estructura, interfaz, responsive design, optimización y despliegue. El proyecto me permitió trabajar tanto la parte visual como la implementación técnica para construir una presencia digital moderna, clara y profesional.",
   },
   {
     title: "Frontend Developer",
