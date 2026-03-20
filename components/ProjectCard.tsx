@@ -6,7 +6,6 @@ import Image from 'next/image';
 interface ProjectCardProps {
   imageUrl: string;
   title: string;
-  githubUrl: string;
   websiteUrl: string;
   technologies: string[];
   description: string;
@@ -15,7 +14,6 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({
   imageUrl,
   title,
-  githubUrl,
   websiteUrl,
   technologies,
   description,

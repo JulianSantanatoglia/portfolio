@@ -146,7 +146,6 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
                   <ProjectCard
                     imageUrl={project.imageUrl}
                     title={project.title}
-                    githubUrl={project.githubUrl}
                     websiteUrl={project.websiteUrl}
                     technologies={project.technologies}
                     description={project.description}
