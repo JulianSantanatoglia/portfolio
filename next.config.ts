@@ -44,8 +44,9 @@ const nextConfig: NextConfig = {
   },
   
   // Performance optimizations
+  // Disabled to avoid production build failure when `critters` is unavailable.
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false,
   },
   
   // Compression
