@@ -14,6 +14,7 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://juliansantanatoglia.dev"),
   title: "Julian Santanatoglia - Frontend Web Developer & Designer",
   description: "Desarrollador web frontend especializado en React, Next.js y diseño UI/UX. Creo experiencias digitales modernas y funcionales. Disponible para proyectos freelance.",
   keywords: ["desarrollador web", "frontend developer", "React", "Next.js", "TypeScript", "UI/UX", "JavaScript", "portfolio"],

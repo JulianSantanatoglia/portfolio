@@ -1,28 +1,29 @@
-const Experience = () => {
-    return (
-      <div className="bg-blue-999 bg-opacity-70 text-gray-300 p-6 rounded-lg w-full">
-        <div className="flex flex-col md:flex-row justify-center md:justify-start items-center">
-          <div className="flex flex-col md:flex-row items-center w-full md:w-auto">
-            <div className="text-center mb-4 md:mb-0 w-full md:w-auto">
-              <span className="text-4xl font-bold text-green-400">+3</span>
-              <p className="mt-1 text-lg font-semibold">EXPERIENCIA</p>
-            </div>
-            <div className="hidden md:block border-l border-gray-600 h-16 mx-4"></div>
-            <div className="block md:hidden border-b border-gray-600 w-16 my-3"></div>
-            <div className="text-center mb-4 md:mb-0 w-full md:w-auto">
-              <span className="text-4xl font-bold text-blue-400">+12</span>
-              <p className="mt-1 text-lg font-semibold">PROYECTOS</p>
-            </div>
-            <div className="hidden md:block border-l border-gray-600 h-16 mx-4"></div>
-            <div className="block md:hidden border-b border-gray-600 w-16 my-3"></div>
-            <div className="text-center w-full md:w-auto">
-              <span className="text-4xl font-bold text-yellow-400">+12</span>
-              <p className="mt-1 text-lg font-semibold">CERTIFICACIONES</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
+import { FaReact, FaJs } from "react-icons/fa";
+import { SiTypescript } from "react-icons/si";
 
-  export default Experience;
+const techStack = [
+  { name: "React", icon: FaReact, color: "text-cyan-400" },
+  { name: "JavaScript", icon: FaJs, color: "text-yellow-400" },
+  { name: "TypeScript", icon: SiTypescript, color: "text-blue-400" },
+];
+
+const Experience = () => {
+  return (
+    <div className="bg-blue-999 bg-opacity-70 text-gray-300 p-6 rounded-lg w-full">
+      <div className="flex flex-row justify-center md:justify-start items-center gap-6">
+        {techStack.map(({ name, icon: Icon, color }) => (
+          <div
+            key={name}
+            className="flex items-center justify-center"
+            aria-label={name}
+            title={name}
+          >
+            <Icon className={`text-4xl md:text-5xl ${color}`} aria-hidden="true" />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Experience;

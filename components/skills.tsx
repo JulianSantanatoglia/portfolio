@@ -5,7 +5,6 @@ import {
   FaCss3Alt,
   FaSass,
   FaReact,
-  FaAngular,
   FaBootstrap,
   FaJsSquare,
   FaGitAlt,
@@ -43,7 +42,6 @@ const Skills = () => {
         { name: "TypeScript", icon: <SiTypescript />, color: "text-blue-600" },
         { name: "React", icon: <FaReact />, color: "text-cyan-400" },
         { name: "Next.js", icon: <SiNextdotjs />, color: "text-white" },
-        { name: "Angular", icon: <FaAngular />, color: "text-red-600" },
         { name: "SASS", icon: <FaSass />, color: "text-pink-400" },
         { name: "Tailwind", icon: <SiTailwindcss />, color: "text-cyan-400" },
         { name: "Bootstrap", icon: <FaBootstrap />, color: "text-purple-500" },
@@ -182,7 +180,7 @@ const Skills = () => {
             <p className="text-gray-400">Años de Experiencia</p>
           </div>
           <div className="bg-gradient-to-br from-pink-500/10 to-rose-500/10 border border-pink-500/20 rounded-2xl p-6 text-center backdrop-blur-sm">
-            <div className="text-4xl font-bold text-pink-400 mb-2">10+</div>
+            <div className="text-4xl font-bold text-pink-400 mb-2">15+</div>
             <p className="text-gray-400">Proyectos Completados</p>
           </div>
         </div>

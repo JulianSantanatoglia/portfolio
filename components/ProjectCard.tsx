@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Github } from 'lucide-react';
 import Image from 'next/image';
 
 interface ProjectCardProps {
@@ -26,7 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div
       className={`relative rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ${
-        isHovered ? 'scale-105 shadow-2xl' : 'hover:shadow-2xl'
+        isHovered ? 'scale-[1.02] shadow-2xl' : 'hover:shadow-2xl'
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -41,36 +40,29 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="relative">
           <h3 className="text-lg sm:text-xl font-semibold mb-3 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">{title}</h3>
           <div className="relative w-full h-[180px] sm:h-[200px] group overflow-hidden rounded-xl">
+            <div className={`absolute inset-0 bg-black/40 transition-opacity duration-500 z-[1] ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
             <div className={`absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
-            <div className={`absolute inset-0 backdrop-blur-sm transition-opacity duration-500 ${isHovered ? 'opacity-30' : 'opacity-0'}`}></div>
             
             <Image
               className={`rounded-xl transition-all duration-500 ${isHovered ? 'scale-105' : ''}`}
               src={imageUrl}
               alt={title}
               fill
+              quality={100}
+              sizes="(max-width: 768px) 100vw, 50vw"
               style={{ 
                 objectFit: 'cover',
-                objectPosition: 'center top'
+                objectPosition: 'top'
               }}
             />
             <div className={`absolute inset-0 flex items-center justify-center gap-4 transition-all duration-500 ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <a
-                href={githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gradient-to-r from-gray-900 to-gray-800 hover:from-gray-800 hover:to-gray-700 text-white flex items-center border border-gray-700 rounded-md px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-lg transition-all duration-300 hover:border-gray-600 hover:shadow-lg hover:shadow-blue-500/20"
-              >
-                <Github className="mr-1 h-5 w-5 sm:h-6 sm:w-6" />
-                <span>GitHub</span>
-              </a>
-              <a
                 href={websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 text-white border border-blue-500 rounded-md px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-lg transition-all duration-300 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/30"
+                className="px-4 py-2 text-sm sm:text-base font-medium text-white/90 bg-white/10 border border-white/25 rounded-lg backdrop-blur-md transition-all duration-300 hover:bg-white/15 hover:border-white/40 hover:text-white"
               >
-                Demo
+                Ver demo
               </a>
             </div>
           </div>

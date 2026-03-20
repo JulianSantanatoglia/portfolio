@@ -61,7 +61,7 @@ const Certifications = () => {
                   src={cert.imageUrl}
                   alt={cert.title}
                   fill
-                  className="object-contain p-4 transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 
@@ -101,13 +101,13 @@ const Certifications = () => {
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-2">
-              6+
+              10+
             </div>
             <p className="text-gray-400 text-sm">Plataformas</p>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400 mb-2">
-              2025
+              2026
             </div>
             <p className="text-gray-400 text-sm">Última Actualización</p>
           </div>

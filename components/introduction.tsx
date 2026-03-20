@@ -30,7 +30,6 @@ const Introduction = () => {
                     height={400}
                     alt="Julian Santanatoglia, desarrollador web frontend especializado en React y Next.js"
                     className="rounded-full"
-                    layout="responsive"
                   />
                 </div>
               </div>
@@ -47,14 +46,10 @@ const Introduction = () => {
         <div className="flex flex-col justify-center max-w-2xl lg:max-w-xl">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full w-fit mx-auto md:mx-0 mb-4">
             <Sparkles className="w-4 h-4 text-blue-400" />
-            <span className="text-sm text-blue-400 font-medium">Frontend Developer & Designer</span>
+            <span className="text-sm text-blue-400 font-medium">Frontend Developer</span>
           </div>
 
           <h1 className="mb-4 text-3xl sm:text-4xl leading-tight text-center md:text-left md:text-5xl lg:text-6xl text-balance">
-            <span className="block text-gray-300">¡Hola, soy</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 font-bold">
-              Julián!
-            </span>
             <span className="block text-gray-300">
               Web
               <TypeAnimation
@@ -79,13 +74,17 @@ const Introduction = () => {
           <Experience />
 
           <p className="mx-auto mb-6 text-base md:mx-0 md:mb-10 mt-8 lg:text-lg px-4 sm:px-0 text-center sm:text-left text-gray-300 leading-relaxed">
-          Frontend Developer con experiencia en
-            <span className="text-blue-400 font-semibold"> React, JavaScript, TypeScript y Tailwind CSS</span>
-            , enfocado en crear interfaces web modernas, responsivas y funcionales. También cuento con experiencia en
-            <span className="text-purple-400 font-semibold"> testing, mantenimiento de proyectos web y resolución de problemas técnicos</span>. 
-            Me interesa especialmente 
-            <span className="text-purple-400 font-semibold"> combinar desarrollo frontend con automatización e IA aplicada</span>. 
-            para construir soluciones digitales eficientes y con impacto.
+            Diseño y desarrollo productos web con foco en
+            <span className="font-semibold text-blue-400"> experiencia de usuario</span>,
+            <span className="font-semibold text-blue-400"> rendimiento</span> y
+            <span className="font-semibold text-blue-400"> calidad visual</span>. Me involucro en todo el proceso:
+            <span className="font-semibold text-purple-400"> implementación</span>,
+            <span className="font-semibold text-purple-400"> mejora continua</span>,
+            <span className="font-semibold text-purple-400"> testing</span> y
+            <span className="font-semibold text-purple-400"> resolución de problemas</span> en entornos reales.
+            Mi objetivo es crear soluciones claras y efectivas que aporten
+            <span className="font-semibold text-blue-400"> valor concreto al negocio</span> y una
+            <span className="font-semibold text-blue-400"> experiencia fluida</span> para cada persona usuaria.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:justify-start md:gap-6 lg:gap-8">

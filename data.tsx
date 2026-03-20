@@ -54,11 +54,27 @@ export const projects: Project[] = [
       "HTML",
       "CSS",
       "Javascript",
-      "Angular",
+      "React",
       "TypeScript",
       "Tailwind CSS",
     ],
     description: "Plataforma de venta de entradas para eventos musicales"
+  },
+  {
+    imageUrl: "/jsagency.png",
+    title: "JS Agency",
+    githubUrl: "https://github.com/JulianSantanatoglia/jsagency",
+    websiteUrl: "https://jsagency.es",
+    technologies: [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "Javascript",
+      "React",
+      "TypeScript",
+      "PHP",
+    ],
+    description: "Sitio web corporativo de agencia digital"
   },
   {
     imageUrl: "/mushroom.png",
@@ -77,20 +93,28 @@ export const projects: Project[] = [
     description: "Alquiler de sonido y cabinas de dj para grabar sets"
   },
   {
-    imageUrl: "/jsagency.png",
-    title: ".js agency",
-    githubUrl: "https://github.com/JulianSantanatoglia/jsagency",
-    websiteUrl: "https://js-agency.netlify.app/",
-    technologies: [
-      "HTML",
-      "CSS",
-      "Bootstrap",
-      "Javascript",
-      "React",
-      "TypeScript",
-      "PHP",
-    ],
-    description: "Aplicación de demostración de Nina"
+    imageUrl: "/comunidad-argentina.png",
+    title: "Comunidad Argentina Almeria",
+    githubUrl: "#",
+    websiteUrl: "https://www.comunidadargentinaalmeria.es/",
+    technologies: ["HTML", "CSS", "Javascript", "React", "TypeScript"],
+    description: "Sitio institucional para la comunidad argentina en Almería"
+  },
+  {
+    imageUrl: "/micaeladiaz.png",
+    title: "Micaela Diaz",
+    githubUrl: "#",
+    websiteUrl: "https://micaeladiazph.vercel.app/",
+    technologies: ["HTML", "CSS", "Javascript", "React", "TypeScript"],
+    description: "Portfolio profesional para fotógrafa en Almería"
+  },
+  {
+    imageUrl: "/asantanatoglia.png",
+    title: "Alejandro Santanatoglia",
+    githubUrl: "#",
+    websiteUrl: "https://asantanatoglia.vercel.app/",
+    technologies: ["HTML", "CSS", "Javascript", "React", "TypeScript"],
+    description: "Sitio profesional para estudio de arquitectura"
   },
   {
     imageUrl: "/greenbank.png",
@@ -252,43 +276,66 @@ export const itemsNavbar = [
 
 export const itemsTimeline = [
   {
-    title: "Full-stack Developer",
-    company: "Mushroom Mdp",
-    companyUrl: "https://mushroommdp.com",
-    date: "Feb 2025 - Actualidad",
-    description:
-      "En Mushroom-MDP, plataforma de alquiler de equipos y cabinas de DJ, soy responsable del desarrollo fullstack completo. Utilizo React.js con hooks y Context API, estilando con Tailwind CSS e integrando Firebase para autenticación y base de datos en tiempo real. He implementado un sistema de reservas con FullCalendar, animaciones con Framer Motion, formularios interactivos y optimización SEO. También desarrollé la gestión de reservas de cabinas con diferentes equipamientos, un panel de administración, integración multimedia y un sistema de contacto, todo optimizado para móvil y desktop",
-  },
-  {
     title: "Frontend Developer",
     company: "EventLoop",
     companyUrl: "https://eventloop.club",
-    date: "Abril 2024 - Actualidad",
+    date: "Abr 2024 - Actualidad",
     description:
-      "Contribuyo en el Frontend de EventLoop, una plataforma de venta de entradas para eventos musicales, mis tareas son implementación y optimización de estilos con CSS, Sass y Tailwind, desarrollo de funcionalidades interactivas con JavaScript y React, y gestión de versiones con GitHub.",
+      "Contribuyo al desarrollo frontend de una plataforma de venta de entradas para eventos musicales. Trabajo en la creación y mejora de interfaces, componentes reutilizables y estilos modernos, manteniendo foco en escalabilidad, consistencia visual y experiencia de usuario. También participo en el flujo colaborativo mediante control de versiones con Git y GitHub.",
   },
   {
-    title: "Desarrollador / Diseñador Web",
-    company: "Freelance",
-    date: "Marzo 2023 - Actualidad",
+    title: "Frontend Developer",
+    company: "JS Agency",
+    companyUrl: "https://jsagency.es",
+    date: "2025 - Actualidad",
     description:
-      "He desarrollado plataformas completas, incluyendo ecommerce, web de reservas, blogs, cartas para cafes, app de control de gastos, planificador de viajes, plataforma de cursos, y más. También, he colaborado eficazmente en proyectos existentes, aportando mi experiencia en diseño UI/UX para optimizar la experiencia del usuario y garantizar la adaptabilidad a distintos dispositivos. ",
+      "Desarrollé el sitio web de mi agencia digital de forma integral, abarcando estructura, interfaz, responsive design, optimización y despliegue. El proyecto me permitió aplicar criterio visual, desarrollo frontend y organización de contenido para construir una presencia digital moderna, clara y profesional.",
+  },
+  {
+    title: "Frontend Developer",
+    company: "Comunidad Argentina en Almería",
+    companyUrl: "https://comunidadargentinaalmeria.es",
+    date: "2025",
+    description:
+      "Desarrollo de sitio web institucional orientado a centralizar información, mejorar la presencia digital de la comunidad y facilitar el acceso a contenidos, actividades y contacto. El objetivo fue crear una experiencia clara, accesible y responsive para representar mejor a la organización online.",
+  },
+  {
+    title: "Frontend Developer",
+    company: "Mushroom MDP",
+    companyUrl: "https://mushroommdp.com",
+    date: "2025",
+    description:
+      "Desarrollo de sitio web corporativo para una empresa de alquiler de equipos de sonido e iluminación. Trabajé en la estructura del sitio, la interfaz visual, la adaptación responsive y la optimización general para ofrecer una presencia digital funcional, moderna y alineada con el servicio del cliente.",
+  },
+  {
+    title: "Diseñador Web / Ecommerce",
+    company: "Joyería Díaz",
+    companyUrl: "https://joyeriadiaz.shop/",
+    date: "2024",
+    description:
+      "Desarrollo de tienda online con WordPress, WooCommerce y Stripe, orientada a catálogo, gestión de productos y ventas online. El proyecto incluyó configuración de estructura comercial, experiencia de compra y adaptación del sitio a distintos dispositivos para lograr una tienda clara y funcional.",
+  },
+  {
+    title: "QA Manual Intern",
+    company: "Prosite.app",
+    companyUrl: "https://prosite.app",
+    date: "Mar 2023 - Jul 2023",
+    description:
+      "Participé en tareas de testing manual y control de calidad de producto, trabajando en creación de casos de uso, casos de prueba, validaciones funcionales y reporte de errores mediante Jira. Esta experiencia me dio una visión más completa del ciclo de desarrollo y la importancia de la calidad en productos digitales.",
   },
   {
     title: "Carrera de Desarrollo Web Frontend",
     company: "Coderhouse",
-    date: "Marzo 2023",
+    date: "2023 - 2024",
     description:
-      "Conceptos de Desarrollo Web como HTML, CSS Box Modeling y Flexbox, Grids, Pseudoclases, Bootstrap, Git y GitHub, SASS, Animaciones CSS, SEO y servidores, K&C." +
-      " Luego en Javascript: Control de ciclos, funciones, arrays, objetos, funciones del orden superior, DOM y eventos, Asincronismo y peticiones, After DOM, promesas y librerías." +
-      " Por ultimo en React: JSX, transpiling y componentes, promises, asincronía y MAP, consumiendo APIs, Hooks, children y patrones, Routing, navegación y eventos, Context y técnicas de rendering y Firebase.",
+      "Formación enfocada en desarrollo web frontend, cubriendo fundamentos de HTML, CSS, JavaScript y React, junto con buenas prácticas de maquetación, lógica de programación y construcción de interfaces modernas. Fue una etapa clave para consolidar mi base técnica y orientar mi perfil profesional al desarrollo frontend.",
   },
   {
-    title: "Tecnico en informatica profesional y personal",
-    company: "Técnica 3 Necochea (ARG)",  
-    date: "Diciembre 2012",
+    title: "Técnico en informática personal y profesional",
+    company: "Técnica N° 3",
+    date: "Finalizado en 2012",
     description:
-      "Escuela de nivel secundario graduado en Tecnico en informatica profesional y personal, con conocimientos en hardware, software, redes, sistemas operativos, seguridad informática, y soporte técnico.",
+      "Formación técnica orientada a informática, hardware, software, redes y soporte técnico. Esta etapa me dio una base sólida en tecnología, resolución de problemas y comprensión práctica de sistemas, que luego complementé con desarrollo web y herramientas digitales.",
   },
 ];
 
@@ -320,6 +367,13 @@ export const certifications: Certification[] = [
     title: "React JS",
     company: "Coderhouse",
     date: "Agosto 2024",
+    credentialUrl: "#"
+  },
+  {
+    imageUrl: "/certs/desarrollo-con-ia.png",
+    title: "Desarrollo con IA",
+    company: "BIG school",
+    date: "Octubre 2025",
     credentialUrl: "#"
   },
   {

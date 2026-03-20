@@ -2,7 +2,7 @@ import { Mail, MessageCircle, Send, Sparkles } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <div id="contact" className="relative py-20 bg-gray-900 overflow-hidden">
+    <div id="contact" className="relative py-20 bg-gray-900">
       {/* Background effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-full blur-3xl"></div>
@@ -90,13 +90,6 @@ const Contact = () => {
             {/* Corner decoration */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-500/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </a>
-        </div>
-
-        {/* Call to action */}
-        <div className="mt-16 text-center">
-          <p className="text-gray-400 text-lg">
-            También puedes encontrarme en mis redes sociales
-          </p>
         </div>
       </div>
     </div>
