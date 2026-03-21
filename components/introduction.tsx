@@ -58,15 +58,13 @@ const Introduction = () => {
                   1500,
                   " Designer",
                   1500,
-                  " Creator",
-                  1500,
                 ]}
                 wrapper="span"
                 speed={40}
                 repeat={Infinity}
                 className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 ml-2"
                 cursor={false}
-                aria-label="Desarrollador, Diseñador, Creador"
+                aria-label="Desarrollador, Diseñador"
               />
             </span>
           </h1>

@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="overflow-x-hidden">
+      <div className="overflow-x-hidden">
         <TransitionPage />
         <Navbar />
         <div className="relative flex min-h-screen bg-no-repeat bg-gradient-cover bg-gray-900 overflow-x-hidden">
@@ -52,9 +52,9 @@ export default function Home() {
           <motion.div className="relative" {...reveal}>
             <Skills />
           </motion.div>
-          <motion.div className="relative" {...reveal}>
+          <div className="relative">
             <Timeline />
-          </motion.div>
+          </div>
           <motion.div className="relative" {...reveal}>
             <Certifications />
           </motion.div>
@@ -64,7 +64,7 @@ export default function Home() {
           </motion.div>
         </div>
         <ScrollToTop />
-      </main>
+      </div>
     </>
   );
 }

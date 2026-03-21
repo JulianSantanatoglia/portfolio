@@ -1,14 +1,9 @@
 import Link from "next/link";
-import MotionTransition from "./transition-component";
 import { socialNetworks } from "../data";
 
 const Header = () => {
   return (
-    <MotionTransition
-      position="bottom"
-      className="absolute z-50 w-full top-5 md:top-10"
-    >
-      <header>
+      <header className="absolute z-50 w-full top-5 md:top-10">
         <div className="container px-4 max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <Link href="#introduction">
             <h1 className="my-3 text-2xl font-bold text-center md:text-left md:text-4xl text-white">
@@ -29,7 +24,6 @@ const Header = () => {
           </div>
         </div>
       </header>
-    </MotionTransition>
   );
 };
 

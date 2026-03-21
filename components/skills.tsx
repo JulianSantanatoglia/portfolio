@@ -144,7 +144,11 @@ const Skills = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg sm:rounded-xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                   <div className="relative bg-gray-800/80 rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4 flex items-center justify-center">
                     {React.cloneElement(skill.icon, {
-                      className: `w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 ${skill.color} transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12`
+                      className: `${
+                        skill.name === "TypeScript"
+                          ? "w-5 h-5 sm:w-7 sm:h-7 md:w-9 md:h-9 lg:w-11 lg:h-11"
+                          : "w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12"
+                      } ${skill.color} transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12`
                     })}
                   </div>
                 </div>
