@@ -20,7 +20,7 @@ const Contact = () => {
           <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-4">
             {isEs ? "¡Hablemos!" : "Let's talk!"}
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-400 max-w-[21rem] sm:max-w-2xl mx-auto px-2 sm:px-0">
             {isEs
               ? "Escríbeme y hagamos realidad tu próximo proyecto. Estoy disponible para nuevas oportunidades"
               : "Send me a message and let's bring your next project to life. I am available for new opportunities."}

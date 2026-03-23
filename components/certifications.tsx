@@ -33,10 +33,10 @@ const Certifications = () => {
               {isEs ? "Formación Profesional" : "Professional Education"}
             </span>
           </div>
-          <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-4">
+          <h2 className="text-4xl sm:text-5xl leading-tight font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-4">
             {isEs ? "Certificaciones" : "Certifications"}
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-400 max-w-[21rem] sm:max-w-2xl mx-auto px-2 sm:px-0">
             {isEs
               ? "Mis certificaciones y credenciales que validan mi experiencia y conocimientos"
               : "My certifications and credentials that validate my experience and skills"}

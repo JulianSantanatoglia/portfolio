@@ -97,7 +97,7 @@ const Skills = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-3">
             {isEs ? "Stack Tecnológico" : "Tech Stack"}
           </h2>
-          <p className="text-base text-gray-400 max-w-2xl mx-auto">
+          <p className="text-base text-gray-400 max-w-[21rem] sm:max-w-2xl mx-auto px-2 sm:px-0">
             {isEs
               ? "Herramientas y tecnologías que domino para crear experiencias digitales excepcionales"
               : "Tools and technologies I use to build exceptional digital experiences"}

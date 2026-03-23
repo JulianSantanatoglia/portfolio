@@ -85,7 +85,7 @@ const Timeline: React.FC = () => {
           <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 mb-4">
             {language === "es" ? "Evolución Profesional" : "Professional Evolution"}
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-400 max-w-[21rem] sm:max-w-2xl mx-auto px-2 sm:px-0">
             {language === "es"
               ? "Mi camino en el desarrollo web y diseño digital"
               : "My journey in web development and digital design"}

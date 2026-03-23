@@ -46,7 +46,7 @@ export default function Home() {
           <h2 className="relative text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-4">
             {language === "es" ? "Portfolio de Proyectos" : "Project Portfolio"}
           </h2>
-          <p className="relative text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="relative text-base sm:text-lg text-gray-400 max-w-[21rem] sm:max-w-2xl mx-auto px-2 sm:px-0">
             {language === "es"
               ? "Una selección de mis trabajos más destacados y colaboraciones profesionales"
               : "A curated selection of my featured work and professional collaborations"}
