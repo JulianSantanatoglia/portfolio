@@ -4,8 +4,12 @@ import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 import Experience from "./experience";
 import { Sparkles, Download, ArrowRight } from "lucide-react";
+import { useLanguage } from "./language-provider";
 
 const Introduction = () => {
+  const { language } = useLanguage();
+  const isEs = language === "es";
+
   return (
     <div id="introduction" className="relative z-20 w-full bg-darkBg/60 overflow-hidden">
       {/* Animated background elements */}
@@ -28,7 +32,11 @@ const Introduction = () => {
                     priority
                     width={400}
                     height={400}
-                    alt="Julian Santanatoglia, desarrollador web frontend especializado en React y Next.js"
+                    alt={
+                      isEs
+                        ? "Julian Santanatoglia, desarrollador web frontend especializado en React y Next.js"
+                        : "Julian Santanatoglia, frontend web developer specialized in React and Next.js"
+                    }
                     className="rounded-full"
                   />
                 </div>
@@ -37,7 +45,7 @@ const Introduction = () => {
               {/* Status indicator */}
               <div className="absolute bottom-6 right-6 flex items-center gap-2 bg-green-500/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-green-400/50 shadow-lg">
                 <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                <span className="text-xs font-semibold text-white">Disponible</span>
+                <span className="text-xs font-semibold text-white">{isEs ? "Disponible" : "Available"}</span>
               </div>
             </div>
           </div>
@@ -46,7 +54,9 @@ const Introduction = () => {
         <div className="flex flex-col justify-center max-w-2xl lg:max-w-xl">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full w-fit mx-auto md:mx-0 mb-4">
             <Sparkles className="w-4 h-4 text-blue-400" />
-            <span className="text-sm text-blue-400 font-medium">Frontend Developer</span>
+            <span className="text-sm text-blue-400 font-medium">
+              {isEs ? "Desarrollador Frontend" : "Frontend Developer"}
+            </span>
           </div>
 
           <h1 className="mb-4 text-3xl sm:text-4xl leading-tight text-center md:text-left md:text-5xl lg:text-6xl text-balance">
@@ -54,9 +64,9 @@ const Introduction = () => {
               Web
               <TypeAnimation
                 sequence={[
-                  " Developer",
+                  isEs ? " Developer" : " Developer",
                   1500,
-                  " Designer",
+                  isEs ? " Designer" : " Designer",
                   1500,
                 ]}
                 wrapper="span"
@@ -64,7 +74,7 @@ const Introduction = () => {
                 repeat={Infinity}
                 className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 ml-2"
                 cursor={false}
-                aria-label="Desarrollador, Diseñador"
+                aria-label={isEs ? "Desarrollador, Diseñador" : "Developer, Designer"}
               />
             </span>
           </h1>
@@ -72,28 +82,46 @@ const Introduction = () => {
           <Experience />
 
           <p className="mx-auto mb-6 text-base md:mx-0 md:mb-10 mt-8 lg:text-lg px-4 sm:px-0 text-center sm:text-left text-gray-300 leading-relaxed">
-            Diseño y desarrollo productos web con foco en
-            <span className="font-semibold text-blue-400"> experiencia de usuario</span>,
-            <span className="font-semibold text-blue-400"> rendimiento</span> y
-            <span className="font-semibold text-blue-400"> calidad visual</span>. Me involucro en todo el proceso:
-            <span className="font-semibold text-purple-400"> implementación</span>,
-            <span className="font-semibold text-purple-400"> mejora continua</span>,
-            <span className="font-semibold text-purple-400"> testing</span> y
-            <span className="font-semibold text-purple-400"> resolución de problemas</span> en entornos reales.
-            Mi objetivo es crear soluciones claras y efectivas que aporten
-            <span className="font-semibold text-blue-400"> valor concreto al negocio</span> y una
-            <span className="font-semibold text-blue-400"> experiencia fluida</span> para cada usuario.
+            {isEs ? (
+              <>
+                Diseño y desarrollo productos web con foco en
+                <span className="font-semibold text-blue-400"> experiencia de usuario</span>,
+                <span className="font-semibold text-blue-400"> rendimiento</span> y
+                <span className="font-semibold text-blue-400"> calidad visual</span>. Me involucro en todo el proceso:
+                <span className="font-semibold text-purple-400"> implementación</span>,
+                <span className="font-semibold text-purple-400"> mejora continua</span>,
+                <span className="font-semibold text-purple-400"> testing</span> y
+                <span className="font-semibold text-purple-400"> resolución de problemas</span> en entornos reales.
+                Mi objetivo es crear soluciones claras y efectivas que aporten
+                <span className="font-semibold text-blue-400"> valor concreto al negocio</span> y una
+                <span className="font-semibold text-blue-400"> experiencia fluida</span> para cada usuario.
+              </>
+            ) : (
+              <>
+                I design and build web products focused on
+                <span className="font-semibold text-blue-400"> user experience</span>,
+                <span className="font-semibold text-blue-400"> performance</span>, and
+                <span className="font-semibold text-blue-400"> visual quality</span>. I get involved throughout the process:
+                <span className="font-semibold text-purple-400"> implementation</span>,
+                <span className="font-semibold text-purple-400"> continuous improvement</span>,
+                <span className="font-semibold text-purple-400"> testing</span>, and
+                <span className="font-semibold text-purple-400"> problem solving</span> in real environments.
+                My goal is to create clear and effective solutions that deliver
+                <span className="font-semibold text-blue-400"> tangible business value</span> and a
+                <span className="font-semibold text-blue-400"> smooth experience</span> for every user.
+              </>
+            )}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:justify-start md:gap-6 lg:gap-8">
             <Link
               href="#portfolio"
               className="group relative px-4 py-2.5 sm:px-6 sm:py-3 transition-all cursor-pointer text-sm sm:text-md w-full sm:w-fit rounded-xl overflow-hidden focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
-              aria-label="Ver mi portfolio de proyectos"
+              aria-label={isEs ? "Ver mi portfolio de proyectos" : "See my project portfolio"}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 transition-transform group-hover:scale-110"></div>
               <div className="relative flex items-center justify-center gap-2 text-white font-semibold">
-                <span>Ver trabajos</span>
+                <span>{isEs ? "Ver trabajos" : "View work"}</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </div>
             </Link>
@@ -104,12 +132,12 @@ const Introduction = () => {
               download="cv-jsantanatoglia-SPA.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Descargar mi CV en formato PDF"
+              aria-label={isEs ? "Descargar mi CV en formato PDF" : "Download my resume in PDF format"}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <div className="relative flex items-center justify-center gap-2 font-semibold">
                 <Download className="w-4 h-4" aria-hidden="true" />
-                <span>Descargar CV</span>
+                <span>{isEs ? "Descargar CV" : "Download Resume"}</span>
               </div>
             </Link>
           </div>

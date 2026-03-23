@@ -13,8 +13,13 @@ import Certifications from "../../components/certifications";
 import ScrollToTop from "../../components/scroll-to-top";
 import { projects } from "../../data";
 import { motion } from "framer-motion";
+import { useLanguage } from "../../components/language-provider";
+import { localizeProjects } from "../../utils/localized-data";
 
 export default function Home() {
+  const { language } = useLanguage();
+  const localizedProjects = localizeProjects(projects, language);
+
   const reveal = {
     initial: { opacity: 0, y: 28, filter: "blur(4px)" },
     whileInView: { opacity: 1, y: 0, filter: "blur(0px)" },
@@ -39,14 +44,16 @@ export default function Home() {
 
         <motion.div id="portfolio" className="relative text-center mb-10 pt-20" {...reveal}>
           <h2 className="relative text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-4">
-            Portfolio de Proyectos
+            {language === "es" ? "Portfolio de Proyectos" : "Project Portfolio"}
           </h2>
           <p className="relative text-lg text-gray-400 max-w-2xl mx-auto">
-            Una selección de mis trabajos más destacados y colaboraciones profesionales
+            {language === "es"
+              ? "Una selección de mis trabajos más destacados y colaboraciones profesionales"
+              : "A curated selection of my featured work and professional collaborations"}
           </p>
         </motion.div>
         <motion.div className="relative w-full max-w-6xl px-4 pb-20 md:pb-20 mx-auto mt-10 md:px-6" {...reveal}>
-          <ProjectCarousel projects={projects} />
+          <ProjectCarousel projects={localizedProjects} />
         </motion.div>
         <motion.div className="relative" {...reveal}>
           <Skills />

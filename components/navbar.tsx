@@ -3,13 +3,19 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { itemsNavbar } from "../data";
 import MotionTransition from "./transition-component";
+import { useLanguage } from "./language-provider";
 
 const Navbar = () => {
+  const { language } = useLanguage();
   const sectionIds = useMemo(
     () => itemsNavbar.map((item) => item.link.replace("#", "")),
     []
   );
   const [activeSection, setActiveSection] = useState<string>(sectionIds[0] ?? "");
+  const navLabels = {
+    es: ["Sobre mí", "Portfolio", "Skills", "Experiencia", "Certificaciones", "Contacto"],
+    en: ["About me", "Portfolio", "Skills", "Experience", "Certifications", "Contact"],
+  } as const;
 
   useEffect(() => {
     const elements = sectionIds
@@ -81,7 +87,8 @@ const Navbar = () => {
               />
               <Link 
                 href={item.link}
-                aria-label={item.title}
+                aria-label={navLabels[language][item.id - 1] ?? item.title}
+                title={navLabels[language][item.id - 1] ?? item.title}
                 className="focus:outline-none"
                 onClick={() => setActiveSection(item.link.replace("#", ""))}
               >

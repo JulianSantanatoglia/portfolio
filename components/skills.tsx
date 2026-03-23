@@ -21,8 +21,11 @@ import {
 import { RiFileExcel2Fill } from "react-icons/ri";
 import React, { useState, useEffect } from "react";
 import { LayoutDashboard, PencilRuler, Code2, Server, Palette } from "lucide-react";
+import { useLanguage } from "./language-provider";
 
 const Skills = () => {
+  const { language } = useLanguage();
+  const isEs = language === "es";
   const [activeCategory, setActiveCategory] = useState<string>("all");
   const [isVisible, setIsVisible] = useState(false);
 
@@ -32,7 +35,7 @@ const Skills = () => {
 
   const skillCategories = {
     frontend: {
-      title: "Frontend Development",
+      title: isEs ? "Desarrollo Frontend" : "Frontend Development",
       icon: <Code2 className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500",
       skills: [
@@ -48,7 +51,7 @@ const Skills = () => {
       ],
     },
     backend: {
-      title: "Backend & Tools",
+      title: isEs ? "Backend y Herramientas" : "Backend & Tools",
       icon: <Server className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500",
       skills: [
@@ -60,7 +63,7 @@ const Skills = () => {
       ],
     },
     design: {
-      title: "Design & Creative",
+      title: isEs ? "Diseño y Creatividad" : "Design & Creative",
       icon: <Palette className="w-6 h-6" />,
       color: "from-pink-500 to-rose-500",
       skills: [
@@ -92,10 +95,12 @@ const Skills = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-3">
-            Stack Tecnológico
+            {isEs ? "Stack Tecnológico" : "Tech Stack"}
           </h2>
           <p className="text-base text-gray-400 max-w-2xl mx-auto">
-            Herramientas y tecnologías que domino para crear experiencias digitales excepcionales
+            {isEs
+              ? "Herramientas y tecnologías que domino para crear experiencias digitales excepcionales"
+              : "Tools and technologies I use to build exceptional digital experiences"}
           </p>
         </div>
 
@@ -109,7 +114,7 @@ const Skills = () => {
                 : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700"
             }`}
           >
-            Todas
+            {isEs ? "Todas" : "All"}
           </button>
           {Object.entries(skillCategories).map(([key, category]) => (
             <button
@@ -170,15 +175,15 @@ const Skills = () => {
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 rounded-2xl p-6 text-center backdrop-blur-sm">
             <div className="text-4xl font-bold text-blue-400 mb-2">{getAllSkills().length}+</div>
-            <p className="text-gray-400">Tecnologías</p>
+            <p className="text-gray-400">{isEs ? "Tecnologías" : "Technologies"}</p>
           </div>
           <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-6 text-center backdrop-blur-sm">
             <div className="text-4xl font-bold text-purple-400 mb-2">3+</div>
-            <p className="text-gray-400">Años de Experiencia</p>
+            <p className="text-gray-400">{isEs ? "Años de Experiencia" : "Years of Experience"}</p>
           </div>
           <div className="bg-gradient-to-br from-pink-500/10 to-rose-500/10 border border-pink-500/20 rounded-2xl p-6 text-center backdrop-blur-sm">
             <div className="text-4xl font-bold text-pink-400 mb-2">15+</div>
-            <p className="text-gray-400">Proyectos Completados</p>
+            <p className="text-gray-400">{isEs ? "Proyectos Completados" : "Completed Projects"}</p>
           </div>
         </div>
       </div>

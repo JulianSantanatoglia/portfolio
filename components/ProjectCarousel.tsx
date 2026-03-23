@@ -4,12 +4,14 @@ import React, { useState, useRef, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ProjectCard from './ProjectCard';
 import { Project } from '../data';
+import { useLanguage } from './language-provider';
 
 interface ProjectCarouselProps {
   projects: Project[];
 }
 
 const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
+  const { language } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -136,6 +138,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
       <div className="flex items-center justify-center gap-2 md:gap-4">
         <button
           onClick={prevSlide}
+          aria-label={language === "es" ? "Proyecto anterior" : "Previous project"}
           className="absolute left-2 md:static p-1.5 md:p-3 rounded-full bg-gray-800/70 hover:bg-gray-700/70 transition-all duration-300 text-white disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl hover:scale-110 z-10"
           disabled={isAnimating}
         >
@@ -179,6 +182,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
 
         <button
           onClick={nextSlide}
+          aria-label={language === "es" ? "Siguiente proyecto" : "Next project"}
           className="absolute right-2 md:static p-1.5 md:p-3 rounded-full bg-gray-800/70 hover:bg-gray-700/70 transition-all duration-300 text-white disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl hover:scale-110 z-10"
           disabled={isAnimating}
         >
@@ -191,6 +195,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
           <button
             key={index}
             onClick={() => handleDotClick(index * projectsPerPage)}
+            aria-label={language === "es" ? `Ir a grupo ${index + 1}` : `Go to group ${index + 1}`}
             className={`h-2 rounded-full transition-all duration-300 ${
               index === Math.floor(currentIndex / projectsPerPage)
                 ? 'bg-blue-500 w-6'

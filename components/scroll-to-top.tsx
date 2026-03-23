@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import { ChevronUp } from 'lucide-react';
+import { useLanguage } from './language-provider';
 
 const ScrollToTop = () => {
+  const { language } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
@@ -31,6 +33,7 @@ const ScrollToTop = () => {
   return (
     <button
       onClick={scrollToTop}
+      aria-label={language === "es" ? "Volver arriba" : "Back to top"}
       className={`fixed bottom-20 md:bottom-8 right-8 p-3 rounded-full bg-blue-950/80 backdrop-blur-sm border border-blue-500/50 transition-all duration-300 hover:bg-blue-900/80 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/20 z-50 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       }`}

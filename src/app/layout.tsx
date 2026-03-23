@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../../components/header";
+import { LanguageProvider } from "../../components/language-provider";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -76,16 +77,18 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className={`${inter.variable} ${robotoMono.variable} bg-gray-900`}>
-        <a 
-          href="#main-content" 
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50"
-        >
-          Saltar al contenido principal
-        </a>
-        <Header />
-        <main id="main-content" className="overflow-visible">
-          {children}
-        </main>
+        <LanguageProvider>
+          <a 
+            href="#main-content" 
+            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50"
+          >
+            Saltar al contenido principal / Skip to main content
+          </a>
+          <Header />
+          <main id="main-content" className="overflow-visible">
+            {children}
+          </main>
+        </LanguageProvider>
       </body>
     </html>
   );

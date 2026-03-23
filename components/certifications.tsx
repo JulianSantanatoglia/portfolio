@@ -5,8 +5,11 @@ import Image from 'next/image';
 import { certifications } from '../data';
 import { ExternalLink, Award } from 'lucide-react';
 import CertificationModal from './CertificationModal';
+import { useLanguage } from './language-provider';
 
 const Certifications = () => {
+  const { language } = useLanguage();
+  const isEs = language === "es";
   const [selectedCert, setSelectedCert] = useState<{
     imageUrl: string;
     title: string;
@@ -26,13 +29,17 @@ const Certifications = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full mb-6">
             <Award className="w-5 h-5 text-purple-400" />
-            <span className="text-sm text-purple-400 font-medium">Formación Profesional</span>
+            <span className="text-sm text-purple-400 font-medium">
+              {isEs ? "Formación Profesional" : "Professional Education"}
+            </span>
           </div>
           <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-4">
-            Certificaciones
+            {isEs ? "Certificaciones" : "Certifications"}
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Mis certificaciones y credenciales que validan mi experiencia y conocimientos
+            {isEs
+              ? "Mis certificaciones y credenciales que validan mi experiencia y conocimientos"
+              : "My certifications and credentials that validate my experience and skills"}
           </p>
         </div>
 
@@ -74,7 +81,7 @@ const Certifications = () => {
                   className="group/btn relative inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-lg text-sm text-purple-400 hover:text-purple-300 hover:border-purple-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 overflow-hidden"
                 >
                   <span className="absolute inset-0 bg-gradient-to-r from-purple-500/0 to-pink-500/0 group-hover/btn:from-purple-500/20 group-hover/btn:to-pink-500/20 transition-all"></span>
-                  <span className="relative font-semibold">Ver credencial</span>
+                  <span className="relative font-semibold">{isEs ? "Ver credencial" : "View credential"}</span>
                   <ExternalLink className="relative w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                 </button>
               </div>
@@ -91,19 +98,19 @@ const Certifications = () => {
             <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-2">
               {certifications.length}+
             </div>
-            <p className="text-gray-400 text-sm">Certificaciones</p>
+            <p className="text-gray-400 text-sm">{isEs ? "Certificaciones" : "Certifications"}</p>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-2">
               10+
             </div>
-            <p className="text-gray-400 text-sm">Plataformas</p>
+            <p className="text-gray-400 text-sm">{isEs ? "Plataformas" : "Platforms"}</p>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400 mb-2">
               2026
             </div>
-            <p className="text-gray-400 text-sm">Última Actualización</p>
+            <p className="text-gray-400 text-sm">{isEs ? "Última Actualización" : "Last Updated"}</p>
           </div>
         </div>
       </div>

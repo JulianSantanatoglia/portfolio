@@ -1,6 +1,9 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 import { X } from 'lucide-react';
+import { useLanguage } from './language-provider';
 
 interface CertificationModalProps {
   isOpen: boolean;
@@ -15,6 +18,7 @@ const CertificationModal: React.FC<CertificationModalProps> = ({
   imageUrl,
   title,
 }) => {
+  const { language } = useLanguage();
   if (!isOpen) return null;
 
   return (
@@ -22,6 +26,7 @@ const CertificationModal: React.FC<CertificationModalProps> = ({
       <div className="relative max-w-4xl w-full mx-4">
         <button
           onClick={onClose}
+          aria-label={language === "es" ? "Cerrar modal" : "Close modal"}
           className="absolute -top-10 right-0 text-white hover:text-blue-400 transition-colors duration-300"
         >
           <X size={24} />

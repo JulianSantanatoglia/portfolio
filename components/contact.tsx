@@ -1,19 +1,29 @@
+"use client";
+
 import { Mail, MessageCircle, Send, Sparkles } from 'lucide-react';
+import { useLanguage } from './language-provider';
 
 const Contact = () => {
+  const { language } = useLanguage();
+  const isEs = language === "es";
+
   return (
     <div id="contact" className="relative py-20 bg-transparent">
       <div className="relative container mx-auto px-4 z-10">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-full mb-6">
             <Sparkles className="w-5 h-5 text-blue-400" />
-            <span className="text-sm text-blue-400 font-medium">¿Tienes un proyecto en mente?</span>
+            <span className="text-sm text-blue-400 font-medium">
+              {isEs ? "¿Tienes un proyecto en mente?" : "Do you have a project in mind?"}
+            </span>
           </div>
           <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-4">
-            ¡Hablemos!
+            {isEs ? "¡Hablemos!" : "Let's talk!"}
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Escríbeme y hagamos realidad tu próximo proyecto. Estoy disponible para nuevas oportunidades
+            {isEs
+              ? "Escríbeme y hagamos realidad tu próximo proyecto. Estoy disponible para nuevas oportunidades"
+              : "Send me a message and let's bring your next project to life. I am available for new opportunities."}
           </p>
         </div>
 
@@ -41,7 +51,7 @@ const Contact = () => {
               
               <div className="relative inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30 text-blue-400 rounded-xl group-hover:border-blue-400/50 transition-all duration-300 overflow-hidden">
                 <span className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/20 group-hover:to-purple-500/20 transition-all"></span>
-                <span className="relative font-semibold">Enviar mensaje</span>
+                <span className="relative font-semibold">{isEs ? "Enviar mensaje" : "Send message"}</span>
                 <Send className="relative w-4 h-4 transition-transform group-hover:translate-x-1" />
               </div>
             </div>
@@ -71,11 +81,13 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-green-400 group-hover:to-emerald-400 transition-all">
                 WhatsApp
               </h3>
-              <p className="text-gray-400 mb-6">Envíame un mensaje directo y respondo rápido</p>
+              <p className="text-gray-400 mb-6">
+                {isEs ? "Envíame un mensaje directo y respondo rápido" : "Send me a direct message and I will reply quickly"}
+              </p>
               
               <div className="relative inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/30 text-green-400 rounded-xl group-hover:border-green-400/50 transition-all duration-300 overflow-hidden">
                 <span className="absolute inset-0 bg-gradient-to-r from-green-500/0 to-emerald-500/0 group-hover:from-green-500/20 group-hover:to-emerald-500/20 transition-all"></span>
-                <span className="relative font-semibold">Enviar mensaje</span>
+                <span className="relative font-semibold">{isEs ? "Enviar mensaje" : "Send message"}</span>
                 <Send className="relative w-4 h-4 transition-transform group-hover:translate-x-1" />
               </div>
             </div>
