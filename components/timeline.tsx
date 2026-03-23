@@ -15,56 +15,43 @@ interface TimelineItem {
 
 interface StackingTimelineCardProps {
   item: TimelineItem;
-  index: number;
 }
 
-const StackingTimelineCard: React.FC<StackingTimelineCardProps> = ({ item, index }) => {
-  const stackOffset = Math.min(index, 7) * 0.85;
-
+const TimelineCard: React.FC<StackingTimelineCardProps> = ({ item }) => {
   return (
-    <div className="relative h-[18rem] md:h-[20rem]">
-      <div
-        className="sticky"
-        style={{
-          top: `calc(3.75rem + ${stackOffset}rem)`,
-          zIndex: index + 1,
-        }}
-      >
-        <motion.article
-          initial={{ opacity: 0, y: 30, scale: 0.98 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.35, ease: "easeOut" }}
-          className="relative w-full bg-gray-800/60 backdrop-blur-sm rounded-2xl shadow-lg p-6 md:p-7 border border-gray-700/60 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300"
-        >
-          <div className="mb-4 flex items-start justify-between gap-4">
-            <div>
-              <h3 className="text-xl font-bold text-white mb-1">{item.title}</h3>
-              {item.company && (
-                <p className="text-sm text-gray-300 font-medium">
-                  {item.companyUrl ? (
-                    <a
-                      href={item.companyUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-400 hover:text-blue-300 transition-colors duration-300 hover:underline inline-flex items-center gap-1"
-                    >
-                      {item.company}
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
-                  ) : (
-                    item.company
-                  )}
-                </p>
+    <motion.article
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.25 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+      className="relative w-full bg-gray-800/60 backdrop-blur-sm rounded-2xl shadow-lg p-6 md:p-7 border border-gray-700/60 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300"
+    >
+      <div className="mb-4 flex items-start justify-between gap-4">
+        <div>
+          <h3 className="text-xl font-bold text-white mb-1">{item.title}</h3>
+          {item.company && (
+            <p className="text-sm text-gray-300 font-medium">
+              {item.companyUrl ? (
+                <a
+                  href={item.companyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 transition-colors duration-300 hover:underline inline-flex items-center gap-1"
+                >
+                  {item.company}
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              ) : (
+                item.company
               )}
-            </div>
-            <p className="text-sm text-blue-400 font-medium whitespace-nowrap">{item.date}</p>
-          </div>
-
-          <p className="text-gray-300 leading-relaxed">{item.description}</p>
-        </motion.article>
+            </p>
+          )}
+        </div>
+        <p className="text-sm text-blue-400 font-medium whitespace-nowrap">{item.date}</p>
       </div>
-    </div>
+
+      <p className="text-gray-300 leading-relaxed">{item.description}</p>
+    </motion.article>
   );
 };
 
@@ -84,12 +71,11 @@ const Timeline: React.FC = () => {
             Mi camino en el desarrollo web y diseño digital
           </p>
         </div>
-        <div className="relative mx-auto max-w-3xl pb-[48vh]">
+        <div className="relative mx-auto max-w-3xl space-y-6">
           {itemsTimeline.map((item, index) => (
-            <StackingTimelineCard
+            <TimelineCard
               key={`${item.title}-${index}`}
               item={item}
-              index={index}
             />
           ))}
         </div>

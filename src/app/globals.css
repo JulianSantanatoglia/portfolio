@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @layer base {
-  html, body {
+  html {
     width: 100%;
     overflow-x: hidden;
   }
@@ -26,6 +26,9 @@
 
   body {
     @apply bg-[var(--background)] text-[var(--foreground)] font-[var(--font-sans)] text-base leading-relaxed;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -44,7 +47,6 @@
   background-color: #111827;
   min-height: 100vh;
   min-height: 100svh;
-  overflow-x: hidden;
 }
 
 /* Animations */

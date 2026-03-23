@@ -36,14 +36,14 @@ const Skills = () => {
       icon: <Code2 className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500",
       skills: [
+        { name: "JavaScript", icon: <FaJsSquare />, color: "text-yellow-400" },
+        { name: "React", icon: <FaReact />, color: "text-cyan-400" },
         { name: "HTML5", icon: <FaHtml5 />, color: "text-orange-500" },
         { name: "CSS3", icon: <FaCss3Alt />, color: "text-blue-500" },
-        { name: "JavaScript", icon: <FaJsSquare />, color: "text-yellow-400" },
+        { name: "Tailwind", icon: <SiTailwindcss />, color: "text-cyan-400" },
         { name: "TypeScript", icon: <SiTypescript />, color: "text-blue-600" },
-        { name: "React", icon: <FaReact />, color: "text-cyan-400" },
         { name: "Next.js", icon: <SiNextdotjs />, color: "text-white" },
         { name: "SASS", icon: <FaSass />, color: "text-pink-400" },
-        { name: "Tailwind", icon: <SiTailwindcss />, color: "text-cyan-400" },
         { name: "Bootstrap", icon: <FaBootstrap />, color: "text-purple-500" },
       ],
     },
@@ -90,22 +90,22 @@ const Skills = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-4">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-3">
             Stack Tecnológico
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-base text-gray-400 max-w-2xl mx-auto">
             Herramientas y tecnologías que domino para crear experiencias digitales excepcionales
           </p>
         </div>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-3 mb-10">
           <button
             onClick={() => setActiveCategory("all")}
-            className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+            className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 ${
               activeCategory === "all"
-                ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/50 scale-105"
+                ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-md shadow-blue-500/30 scale-[1.02]"
                 : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700"
             }`}
           >
@@ -115,9 +115,9 @@ const Skills = () => {
             <button
               key={key}
               onClick={() => setActiveCategory(key)}
-              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2 ${
+              className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 flex items-center gap-2 ${
                 activeCategory === key
-                  ? `bg-gradient-to-r ${category.color} text-white shadow-lg scale-105`
+                  ? `bg-gradient-to-r ${category.color} text-white shadow-md scale-[1.02]`
                   : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700"
               }`}
             >
@@ -128,7 +128,7 @@ const Skills = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-6">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2.5 sm:gap-3 md:gap-4">
           {getFilteredSkills().map((skill, index) => (
             <div
               key={`${skill.name}-${index}`}
@@ -138,23 +138,23 @@ const Skills = () => {
               style={{ transitionDelay: `${index * 50}ms` }}
             >
               {/* Card */}
-              <div className="relative h-full bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2">
+              <div className="relative h-full bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-lg sm:rounded-xl p-2.5 sm:p-3 md:p-4 border border-gray-700/50 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
                 {/* Icon Container */}
-                <div className="relative mb-2 sm:mb-3 md:mb-4">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg sm:rounded-xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                  <div className="relative bg-gray-800/80 rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4 flex items-center justify-center">
+                <div className="relative mb-1.5 sm:mb-2">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg blur-lg group-hover:blur-xl transition-all duration-300"></div>
+                  <div className="relative bg-gray-800/80 rounded-lg p-2 sm:p-2.5 md:p-3 flex items-center justify-center">
                     {React.cloneElement(skill.icon, {
                       className: `${
                         skill.name === "TypeScript"
-                          ? "w-5 h-5 sm:w-7 sm:h-7 md:w-9 md:h-9 lg:w-11 lg:h-11"
-                          : "w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12"
-                      } ${skill.color} transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12`
+                          ? "w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                          : "w-4 h-4 sm:w-6 sm:h-6 md:w-7 md:h-7"
+                      } ${skill.color} transition-transform duration-300 group-hover:scale-105`
                     })}
                   </div>
                 </div>
 
                 {/* Skill Name */}
-                <h3 className="text-center font-semibold text-gray-200 mb-2 sm:mb-3 text-xs sm:text-sm md:text-base group-hover:text-white transition-colors">
+                <h3 className="text-center font-medium text-gray-200 text-[11px] sm:text-xs md:text-sm group-hover:text-white transition-colors">
                   {skill.name}
                 </h3>
 
@@ -162,8 +162,6 @@ const Skills = () => {
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/0 via-purple-500/0 to-pink-500/0 group-hover:from-blue-500/10 group-hover:via-purple-500/10 group-hover:to-pink-500/10 transition-all duration-300"></div>
               </div>
 
-              {/* Floating particles effect */}
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
             </div>
           ))}
         </div>

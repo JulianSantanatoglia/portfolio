@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
+import { ExternalLink, Sparkles } from 'lucide-react';
 
 interface ProjectCardProps {
   imageUrl: string;
@@ -18,70 +19,53 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   technologies,
   description,
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
-    <div
-      className={`relative rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ${
-        isHovered ? 'scale-[1.02] shadow-2xl' : 'hover:shadow-2xl'
-      }`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 opacity-90"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
-      
-      <div className="absolute inset-0 rounded-2xl border border-blue-500/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
-      <div className="absolute inset-0 rounded-2xl border border-purple-500/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
-      
-      <div className="relative p-4 sm:p-6 z-10">
-        <div className="relative">
-          <h3 className="text-lg sm:text-xl font-semibold mb-3 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">{title}</h3>
-          <div className="relative w-full h-[180px] sm:h-[200px] group overflow-hidden rounded-xl">
-            <div className={`absolute inset-0 bg-black/55 transition-opacity duration-500 z-[1] ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
-            <div className={`absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
-            
-            <Image
-              className="rounded-xl"
-              src={imageUrl}
-              alt={title}
-              fill
-              quality={100}
-              sizes="(max-width: 768px) 100vw, 50vw"
-              style={{ 
-                objectFit: 'cover',
-                objectPosition: 'top'
-              }}
-            />
-            <div className={`absolute inset-0 flex items-center justify-center gap-4 transition-all duration-500 ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              <a
-                href={websiteUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 text-sm sm:text-base font-medium text-white border border-white/30 rounded-lg bg-gray-900/55 backdrop-blur-sm transition-colors duration-300 hover:bg-gray-900/70 hover:border-white/50"
-              >
-                Ver demo
-              </a>
-            </div>
-          </div>
+    <article className="group relative flex h-full flex-col rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/95 via-slate-900/90 to-slate-950/95 p-4 sm:p-5 shadow-lg ring-1 ring-blue-500/5 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/40 hover:shadow-blue-500/20 hover:ring-blue-400/20">
+      <div className="pointer-events-none absolute -inset-px rounded-2xl bg-gradient-to-r from-blue-500/0 via-blue-500/20 to-purple-500/0 opacity-0 blur-sm transition-opacity duration-300 group-hover:opacity-100" />
+
+      <div className="relative mb-4 overflow-hidden rounded-xl">
+        <Image
+          className="h-[190px] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+          src={imageUrl}
+          alt={title}
+          width={640}
+          height={380}
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/20 to-transparent" />
+        <div className="pointer-events-none absolute left-3 top-3 inline-flex items-center gap-1 rounded-full border border-blue-400/30 bg-slate-900/70 px-2.5 py-1 text-xs font-medium text-blue-200 backdrop-blur-sm">
+          <Sparkles className="h-3.5 w-3.5" />
+          Proyecto destacado
         </div>
       </div>
-      <div className="px-4 sm:px-6 mb-2">
-        <p className="text-sm text-white/90 font-medium text-center line-clamp-2 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">{description}</p>
-      </div>
-      <div className="p-4 sm:p-6 flex flex-wrap gap-2">
+
+      <h3 className="mb-2 text-lg sm:text-xl font-semibold bg-gradient-to-r from-blue-300 via-cyan-300 to-purple-300 bg-clip-text text-transparent">
+        {title}
+      </h3>
+      <p className="mb-4 text-sm text-slate-300/95 leading-relaxed line-clamp-2">{description}</p>
+
+      <div className="mb-4 flex flex-wrap gap-2">
         {technologies.map((tech) => (
           <span
             key={tech}
-            className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-full px-3 py-1 text-xs sm:text-sm text-gray-300 transition-all duration-300 hover:border-blue-500/50 hover:text-blue-400 hover:shadow-lg hover:shadow-blue-500/10"
+            className="rounded-full border border-slate-700/70 bg-slate-800/70 px-2.5 py-1 text-xs text-slate-300 transition-colors duration-300 group-hover:border-blue-400/30 group-hover:text-blue-200"
           >
             {tech}
           </span>
         ))}
       </div>
-      
-      <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/0 via-blue-500/10 to-purple-500/0 opacity-0 transition-opacity duration-500 ${isHovered ? 'opacity-100' : ''}`}></div>
-    </div>
+
+      <a
+        href={websiteUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative z-10 mt-auto inline-flex w-full items-center justify-center gap-2 rounded-xl border border-blue-400/35 bg-blue-500/10 px-4 py-2.5 text-sm font-semibold text-blue-100 transition-all duration-300 hover:border-blue-300/60 hover:bg-blue-500/20 hover:shadow-lg hover:shadow-blue-500/20 active:scale-[0.99]"
+        aria-label={`Ver demo de ${title}`}
+      >
+        Ver demo
+        <ExternalLink className="h-4 w-4" />
+      </a>
+    </article>
   );
 };
 

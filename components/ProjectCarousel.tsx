@@ -20,6 +20,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
   const touchEndX = useRef(0);
   const touchStartY = useRef(0);
   const touchEndY = useRef(0);
+  const shouldTrackTouch = useRef(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -64,6 +65,12 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
+    const target = e.target as HTMLElement;
+    if (target.closest('a, button')) {
+      shouldTrackTouch.current = false;
+      return;
+    }
+    shouldTrackTouch.current = true;
     touchStartX.current = e.touches[0].clientX;
     touchStartY.current = e.touches[0].clientY;
     touchEndX.current = e.touches[0].clientX;
@@ -71,11 +78,14 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
+    if (!shouldTrackTouch.current) return;
     touchEndX.current = e.touches[0].clientX;
     touchEndY.current = e.touches[0].clientY;
   };
 
   const handleTouchEnd = () => {
+    if (!shouldTrackTouch.current) return;
+    shouldTrackTouch.current = false;
     const deltaX = touchStartX.current - touchEndX.current;
     const deltaY = touchStartY.current - touchEndY.current;
     const isHorizontalSwipe = Math.abs(deltaX) > Math.abs(deltaY);
@@ -90,6 +100,8 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
+    const target = e.target as HTMLElement;
+    if (target.closest('a, button')) return;
     setIsDragging(true);
     setStartX(e.clientX);
   };
