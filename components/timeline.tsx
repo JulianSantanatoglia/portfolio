@@ -36,7 +36,7 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ item, index }) => {
         }}
       >
         <span className="absolute -left-8 md:-left-9 top-6 h-3.5 w-3.5 rounded-full border-2 border-blue-300/80 bg-blue-500 shadow-[0_0_18px_rgba(59,130,246,0.75)]" />
-        <span className="absolute -left-4 md:-left-5 top-[1.95rem] h-px w-4 md:w-5 bg-blue-400/60" />
+        <span className="absolute -left-6 md:-left-5 top-[1.95rem] h-px w-6 md:w-5 bg-blue-400/60" />
 
         <div className="mb-3 flex items-start justify-between gap-4">
           <div>
@@ -92,9 +92,9 @@ const Timeline: React.FC = () => {
           </p>
         </div>
 
-        <div className="relative mx-auto max-w-3xl pl-10 md:pl-12 pb-24">
-          <div className="pointer-events-none absolute left-4 md:left-5 top-[-160px] bottom-0 w-[2px] bg-gradient-to-b from-cyan-300/80 via-blue-500/60 to-purple-500/20" />
-          <div className="pointer-events-none absolute left-[10px] md:left-[14px] top-[-170px] h-3 w-3 rounded-full bg-cyan-300 shadow-[0_0_16px_rgba(34,211,238,0.8)]" />
+        <div className="relative mx-auto max-w-3xl pl-9 md:pl-12 pb-24">
+          <div className="pointer-events-none absolute left-2.5 md:left-5 top-[-160px] bottom-0 w-[2px] bg-gradient-to-b from-cyan-300/80 via-blue-500/60 to-purple-500/20" />
+          <div className="pointer-events-none absolute left-[5px] md:left-[14px] top-[-170px] h-3 w-3 rounded-full bg-cyan-300 shadow-[0_0_16px_rgba(34,211,238,0.8)]" />
 
           {timelineItems.map((item, index) => (
             <TimelineCard
