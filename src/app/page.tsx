@@ -54,13 +54,13 @@ export default function Home() {
         <div className="relative">
           <Timeline />
         </div>
-        <motion.div className="relative" {...reveal}>
+        <div className="relative">
           <Certifications />
-        </motion.div>
-        <motion.div className="relative" {...reveal}>
+        </div>
+        <div className="relative">
           <Contact />
           <Footer />
-        </motion.div>
+        </div>
       </section>
       <ScrollToTop />
     </div>

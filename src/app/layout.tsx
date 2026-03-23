@@ -83,7 +83,7 @@ export default function RootLayout({
           Saltar al contenido principal
         </a>
         <Header />
-        <main id="main-content">
+        <main id="main-content" className="overflow-visible">
           {children}
         </main>
       </body>

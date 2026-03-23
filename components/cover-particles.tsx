@@ -5,8 +5,10 @@ import { loadSlim } from "@tsparticles/slim";
 
 const CoverParticles = () => {
     const [init, setInit] = useState(false);
+    const [isTouchDevice, setIsTouchDevice] = useState(false);
 
     useEffect(() => {
+        setIsTouchDevice(window.matchMedia("(pointer: coarse)").matches);
         initParticlesEngine(async (engine) => {
             await loadSlim(engine);
         }).then(() => {
@@ -19,7 +21,7 @@ const CoverParticles = () => {
         <div className="w-full h-full absolute top-0 left-0 pointer-events-none overflow-hidden">
             <Particles
                 id="tsparticles"
-                className="absolute inset-0"
+                className="absolute inset-0 pointer-events-none"
                 options={{
                     fullScreen: {
                         enable: false,
@@ -28,8 +30,12 @@ const CoverParticles = () => {
                     interactivity: {
                         events: {
                             onHover: {
-                                enable: true,
+                                enable: !isTouchDevice,
                                 mode: "grab",
+                            },
+                            onClick: {
+                                enable: false,
+                                mode: "push",
                             },
                         },
                         modes: {

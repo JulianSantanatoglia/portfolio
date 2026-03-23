@@ -145,7 +145,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
         <div className="overflow-hidden w-full max-w-7xl px-8 md:px-0">
           <div
             ref={carouselRef}
-            className="flex transition-transform duration-300 ease-out"
+            className="flex touch-pan-y transition-transform duration-300 ease-out"
             style={{
               transform: `translateX(-${currentIndex * (100 / projectsPerPage)}%)`,
               cursor: isDragging ? 'grabbing' : 'grab'

@@ -2,8 +2,10 @@
 
 @layer base {
   html {
+    height: 100%;
     width: 100%;
     overflow-x: hidden;
+    overflow-y: auto;
   }
 
   :root {
@@ -26,9 +28,11 @@
 
   body {
     @apply bg-[var(--background)] text-[var(--foreground)] font-[var(--font-sans)] text-base leading-relaxed;
+    min-height: 100%;
     width: 100%;
     margin: 0;
     overflow-x: hidden;
+    overflow-y: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -45,8 +49,9 @@
 
 #main-content {
   background-color: #111827;
-  min-height: 100vh;
-  min-height: 100svh;
+  min-height: 100%;
+  height: auto;
+  overflow: visible;
 }
 
 /* Animations */
